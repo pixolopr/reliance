@@ -25,7 +25,7 @@
             </div>
         </section>
         
-        <a href="<?php echo site_url("site/viewphotos?id=").$photoalbum;?>" class="btn btn-primary" >Photos of Album</a>
+        <a href="<?php echo site_url("site/viewphotos?id=").$photoalbum;?>" class="btn btn-primary">Photos of Album</a>
     </div>
 </div>
 
