@@ -1432,11 +1432,14 @@ $this->load->view("redirect",$data);
     public function multipleimageupload()
     {
         $data["photoalbum"]=$this->input->get_post("photoalbum");
+        $data["before"]=new stdClass();
+        $data["before"]->id=$this->input->get_post("photoalbum");
         $access=array("1");
         $this->checkaccess($access);
-        
+        $data["page2"]="block/relianceblock";
+        $data["title"]="Multiple Image Uploads";
         $data["page"]="multipleimageupload";
-        $this->load->view("template",$data);
+        $this->load->view("templatewith2",$data);
     }
     public function multipleimageuploadjson()
     {
@@ -1444,10 +1447,9 @@ $this->load->view("redirect",$data);
         $order=0;
         $image=$this->input->get_post("image");
         $photoalbum=$this->input->get_post("photoalbum");
-        $this->checkaccess($access);
         $this->photos_model->create($name,$order,$image,$photoalbum);
-        $data["page"]="multipleimageupload";
-        $this->load->view("template",$data);
+        $data["message"]="multipleimageupload";
+        $this->load->view("json",$data);
     }
 
 }

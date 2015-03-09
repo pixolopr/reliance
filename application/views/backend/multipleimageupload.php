@@ -24,6 +24,8 @@
                 <div id="files" class="files"></div>
             </div>
         </section>
+        
+        <a href="<?php echo site_url("site/viewphotos?id=").$photoalbum;?>" class="btn btn-primary" >Photos of Album</a>
     </div>
 </div>
 
