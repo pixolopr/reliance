@@ -1420,14 +1420,35 @@ $data["redirect"]="site/viewfeedback";
 $this->load->view("redirect",$data);
 }
 }
-public function deletefeedback()
-{
-$access=array("1");
-$this->checkaccess($access);
-$this->feedback_model->delete($this->input->get("id"));
-$data["redirect"]="site/viewfeedback";
-$this->load->view("redirect",$data);
-}
+    public function deletefeedback()
+    {
+        $access=array("1");
+        $this->checkaccess($access);
+        $this->feedback_model->delete($this->input->get("id"));
+        $data["redirect"]="site/viewfeedback";
+        $this->load->view("redirect",$data);
+    }
+    
+    public function multipleimageupload()
+    {
+        $data["photoalbum"]=$this->input->get_post("photoalbum");
+        $access=array("1");
+        $this->checkaccess($access);
+        
+        $data["page"]="multipleimageupload";
+        $this->load->view("template",$data);
+    }
+    public function multipleimageuploadjson()
+    {
+        $name=$this->input->get_post("name");
+        $order=0;
+        $image=$this->input->get_post("image");
+        $photoalbum=$this->input->get_post("photoalbum");
+        $this->checkaccess($access);
+        $this->photos_model->create($name,$order,$image,$photoalbum);
+        $data["page"]="multipleimageupload";
+        $this->load->view("template",$data);
+    }
 
 }
 ?>
