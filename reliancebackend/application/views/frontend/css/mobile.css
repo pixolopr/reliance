@@ -1,0 +1,398 @@
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .eve-head.pull-right {
+        width: 100%;
+    }
+    .right-desc.pull-left {
+        width: 100%;
+    }
+    .pic-head {
+        width: 100%;
+        margin: auto;
+    }
+    .pic-head h2 {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+    .pic-det.pull-left {
+        width: 100%;
+    }
+    .pic-det p {
+        /* float: left; */
+        
+        line-height: 13px;
+    }
+    .pic-set {
+        padding-top: 20px;
+        width: 100%;
+    }
+    .pic-set select {
+        border-radius: 15px;
+        text-align: center;
+        color: #949597;
+        width: 100%;
+        background: rgb(204, 205, 206) url(../images/arow.png) no-repeat;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-position: 220px 8px;
+        text-indent: 0.01px;
+        text-overflow: "";
+        margin: auto;
+        padding: 3px 73px 3px;
+        font-size: 12px;
+    }
+    .pic-select.text-center {
+        text-transform: uppercase;
+        font-family: franklin gothic;
+        text-align: center !important;
+        float: none;
+    }
+    .col-md-4.set-img img {
+        text-align: center;
+        width: 100%;
+    }
+    .left-form select {
+        width: 90%;
+    }
+    .left-form input[type=text] {
+        width: 90%;
+    }
+    .left-form P {
+        padding-left: 0px;
+        width: 100%;
+        float: none;
+        left: 0;
+        text-align: center;
+    }
+    .dg-container {
+        width: 100%;
+        height: 80px;
+        position: relative;
+        margin-top: 30px;
+    }
+    .mid-cont {
+        border: 2px solid grey;
+        margin-top: 17px;
+        width: 100%;
+    }
+    .mid-left {
+        background: #a0a09f;
+        height: auto;
+    }
+    .midd-img {
+        padding: 12px;
+        height: auto;
+    }
+    .events-img.text-center button {
+        top: 40px;
+        z-index: 99999;
+    }
+    .events-img.text-center img {
+        margin: -34px auto;
+    }
+    .events-img.text-center {
+        height: 177px;
+    }
+    .dg-container nav {
+        width: 100%;
+        position: relative;
+        z-index: 1000;
+        left: 9%;
+        margin-right: 0px;
+        top: 46%;
+    }
+    .pic-head h2 {
+        /* float: right; */
+        
+        text-transform: uppercase;
+        font-family: franklin gothic;
+        text-align: center;
+    }
+    .pic-det {
+        text-align: center;
+        padding-top: 56px;
+    }
+    .pic-det p {
+        font-size: 13px;
+        line-height: 14px;
+        font-family: franklin gothic;
+        text-align: center;
+        float: none;
+    }
+    .amazingslider-bullet-image-1 {
+        width: 50px !important;
+        height: 50px !important;
+    }
+    .amazingslider-bullet-image-1 img {
+        width: 50px !important;
+    }
+    .amazingslider-bullet-1-0 {
+        height: 50px !important;
+        width: 50px !important;
+        background: none !important;
+    }
+    .amazingslider-bullet-wrapper-1 {
+        width: auto !important;
+        height: auto !important;
+    }
+    .amazingslider-nav-container-1 {
+        width: auto !important;
+        margin-top: 38px !important;
+        margin-bottom: 38px !important;
+    }
+    .amazingslider-nav-1 {
+        width: 62px !important;
+        background: none !important;
+    }
+    .amazingslider-bullet-1-1 {
+        height: 50px !important;
+        background: none !important;
+    }
+    .amazingslider-bullet-1-2 {
+        height: 50px !important;
+        background: none !important;
+    }
+    .amazingslider-bullet-1-3 {
+        height: 50px !important;
+        background: none !important;
+    }
+    .amazingslider-bullet-1-4 {
+        height: px !important;
+        background: none !important;
+    }
+    .amazingslider-bullet-1-5 {
+        height: 50px !important;
+        background: none !important;
+    }
+    .amazingslider-car-right-arrow-1 {
+        left: 0px !important;
+    }
+    .amazingslider-car-left-arrow-1 {
+        left: 0px !important;
+    }
+    .amz {
+        zoom: 0.5;
+        margin-left: 16px !important;
+        margin-top: 24px !important;
+    }
+    .bottom-home {
+        background: #f2f0ee;
+        height: 526px !important;
+        width: 100%;
+    }
+    .left-form select {
+        background-position: 232px 6px;
+    }
+    .amazingslider-nav-featuredarrow-1 {
+        top: 337px !important;
+    }
+    .home-logo img {
+        /* width: 100%; */
+        
+        text-align: center;
+        display: inline;
+    }
+    .home-soci {
+        text-align: center !important;
+    }
+    .head-img {
+        float: none;
+        text-align: center !important;
+    }
+    .home-logo {
+        text-align: center;
+    }
+    .vid-des h4 {
+        text-align: center;
+    }
+    .vid-des h4 span {
+        text-align: center;
+    }
+    .vid-des p {
+        float: none;
+        text-align: center;
+    }
+    .left-btn.text-center button {
+        right: 0px;
+        top: 20px;
+    }
+    .gallert-set {
+        text-align: center;
+    }
+    .mCSB_inside > .mCSB_container {
+text-align: center;
+margin: auto;
+}
+}
+
+@media only screen and (min-width: 469px)and (max-width: 949px) {
+    .mCSB_inside > .mCSB_container {
+text-align: center;
+margin: auto;
+}
+    .left-btn.text-center button {
+        right: 0px;
+        top: 20px;
+    }
+    .vid-des p {
+        float: none;
+        text-align: center;
+    }
+    .vid-des h4 span {
+        text-align: center;
+    }
+    .vid-des h4 {
+        text-align: center;
+    }
+    .home-logo {
+        text-align: center;
+    }
+    .head-img {
+        float: none;
+        text-align: center !important;
+    }
+    .home-logo img {
+        /* width: 100%; */
+        
+        text-align: center;
+        display: inline;
+    }
+    .home-soci {
+        text-align: center !important;
+    }
+    .dg-container nav {
+        width: 100%;
+        position: absolute;
+        z-index: 1000;
+        left: 11%;
+        margin-left: -29px;
+        top: 78%;
+    }
+    .events-img.text-center button {
+        top: 140px;
+        z-index: 9999999;
+    }
+    .events-img.text-center img {
+        margin: -7px auto;
+    }
+    .events-img.text-center {
+        height: 177px;
+    }
+    .midd-img {
+        padding: 12px;
+        height: auto;
+    }
+    .mid-cont {
+        border: 2px solid grey;
+        margin-top: 17px;
+        width: 100%;
+    }
+    .mid-left {
+        background: #a0a09f;
+        height: auto;
+    }
+    .left-form P {
+        padding-left: 0px;
+        width: 100%;
+        float: none;
+        left: 0;
+        text-align: center;
+    }
+    .left-form select {
+        width: 90%;
+    }
+    .left-form input[type=text] {
+        width: 90%;
+    }
+    .eve-head.pull-right {
+        width: 100%;
+    }
+    .right-desc.pull-left {
+        width: 100%;
+    }
+    .pic-head {
+        width: 100%;
+        margin: auto;
+    }
+    .pic-head h2 {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+    .pic-det.pull-left {
+        width: 100%;
+    }
+    .pic-det p {
+        /* float: left; */
+        
+        line-height: 13px;
+    }
+    .dets p {
+        /* float: left; */
+        
+        line-height: 0px !important;
+    }
+    .pic-set {
+        padding-top: 20px;
+        width: 100%;
+    }
+    .pic-set select {
+        padding: 5px 57px 5px 168px;
+        width: 100%;
+        background: rgb(204, 205, 206) url(../images/arow.png) no-repeat;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-position: 369px 10px;
+        text-indent: 0.01px;
+        text-overflow: "";
+        margin: auto;
+    }
+    .pic-select.text-center {
+        text-transform: uppercase;
+        font-family: franklin gothic;
+        float: none;
+    }
+    .col-md-4.set-img img {
+        text-align: center;
+        width: 100%;
+    }
+    .dg-container nav span.dg-next {
+        background-position: top right;
+        position: relative;
+        left: 446px;
+        margin: auto;
+    }
+    .pic-head h2 {
+        float: none;
+        text-transform: uppercase;
+        font-family: franklin gothic;
+        text-align: center;
+    }
+    .pic-det {
+        text-align: center;
+        padding-top: 20px;
+    }
+    .pic-det p {
+        float: none;
+        font-size: 13px;
+        line-height: 5px;
+        font-family: franklin gothic;
+        text-align: center;
+    }
+    .bottom-home {
+        background: #f2f0ee;
+        height: 513px !important;
+        width: 100%;
+    }
+    .left-form select {
+        background-position: 232px 6px;
+    }
+    .amazingslider-nav-featuredarrow-1 {
+        top: 337px !important;
+    }
+    .gallert-set {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 1224px) {}

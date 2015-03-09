@@ -1,0 +1,32 @@
+.liquid {
+	-moz-border-radius:10px 10px 10px 10px;
+	/* -webkit-border-radius:10px 10px 10px 10px; */
+	/* border-radius:10px 10px 10px 10px; */
+	padding:10px 0;
+}
+.liquid .previous {
+	display:block;
+	height: 25px;
+	width: 24px;
+	background-image:url('../images/previous.png');
+	float:left;
+	margin-top: 42px;
+	padding:0;
+	cursor: pointer;
+	opacity: 0.5;
+}
+.liquid .next {
+	display:block;
+	height: 25px;
+	width: 23px;
+	background-image:url('../images/next.png');
+	float:right;
+	margin-top: 42px;
+	cursor: pointer;
+	opacity: 0.5;
+}
+.liquid ul li {
+	width:126px;
+	padding:0 2px;
+	margin:0;
+}
