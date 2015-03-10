@@ -285,11 +285,10 @@ float: none;">
                             </div>
                             <div class="col-md-6">
                                 <div class="vid-right">
-                                    <video width="100%" controls>
-                                        <source src="<?php echo base_url("frontend")."/" ?>video/video.mp4" type="video/mp4">
+                                    
+<!--                                        <source src="https://www.youtube.com/watch?v=PuvZx5PUP10" type="video/mp4">-->
+<iframe width="100%" height="170" src="https://www.youtube.com/embed/PuvZx5PUP10" frameborder="0" allowfullscreen></iframe>
 
-
-                                    </video>
                                 </div>
                             </div>
 
