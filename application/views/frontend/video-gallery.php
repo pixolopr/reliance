@@ -220,7 +220,7 @@ float: none;line-height:0">Views from those who matter.</p>
                                                 $(".addvids").html("<p>Currently, there are no Videos in this album</p>");
                                             };
                                             for (var i = 0; i < data.length; i++) {
-                                                text = '<li><img src="http://img.youtube.com/vi/' + data[i].url + '/default.jpg" alt="The Lighter Side - Reliance Digital 1000 Store Celebration"/><video preload="none" src="http://www.youtube.com/embed/' + data[i].url + '"></video></li>';
+                                                text = '<li><img src="http://img.youtube.com/vi/' + data[i].url + '/hqdefault.jpg" alt="The Lighter Side - Reliance Digital 1000 Store Celebration"/><video preload="none" src="http://www.youtube.com/embed/' + data[i].url + '"></video></li>';
                                                 $(".addvids").append(text);
 
                                                 recallvideo();
