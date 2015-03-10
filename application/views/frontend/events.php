@@ -167,7 +167,7 @@
                     <div class="mid-event">
                         <img src="<?php echo base_url("frontend")."/" ?>images/cale.png">
                         <p style="text-decoration:underline;"> date</p>
-                        <p>26 february,2015</p>
+                        <p><?php echo $eventdata->date; ?></p>
                     </div>
                     <div class="loc-mid">
                         <img src="<?php echo base_url("frontend")."/" ?>images/location.png">
