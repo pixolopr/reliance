@@ -165,9 +165,9 @@
                         </select>
                         
                         <br>
-                        <input class="name" type="text" name="name" value="Name *">
-                        <input class="email" type="text" name="email" value="E-mail *">
-                        <input class="fb" type="text" name="feedback" value="Feedback *">
+                        <input class="fname" type="text" name="fname" value="First Name *">
+                        <input class="mname" type="text" name="mname" value="Middle Name *">
+                        <input class="lname" type="text" name="lname" value="Last Name *">
                         <p><sup>*</sup>INDICATES A REQUIRED FEILD.</p>
                         <div class="left-btn text-center">
                             <button type="button" class="enter">ENTER</button>
@@ -176,9 +176,9 @@
             <script>
             
             var salutation = 0;
-            var name="";
-            var email="";
-            var feedback="";
+            var fname="";
+            var mname="";
+            var lname="";
             //var location = location.protocol+'//'+location.host+'/reliance/uploads/';
             $(document).ready(function() {
                 
@@ -192,7 +192,7 @@
                 function submit(){
                     
                     console.log("submit");
-                        $.getJSON("<?php echo site_url("website/sendfeedback"); ?>",{salut:salutation, name:name, email:email, fb:feedback},function(data) {
+                        $.getJSON("<?php echo site_url("website/sendfeedback"); ?>",{salut:salutation, fname:fname, mname:mname, lname:lname},function(data) {
                             console.log(data);
                             showresult(data);
                         });   
@@ -200,9 +200,9 @@
                 $(".enter").click(function () {
                     console.log("clicked");
                     salutation = $(".salut").val();
-                    name=$(".name").val();
-                    email=$(".email").val();
-                    feedback=$(".fb").val();
+                    fname=$(".fname").val();
+                    mname=$(".mname").val();
+                    lname=$(".lname").val();
                     submit();
                 });
                 
@@ -286,7 +286,7 @@ float: none;">
                             <div class="col-md-6">
                                 <div class="vid-right">
                                     <video width="100%" controls>
-                                        <source src="video/video.mp4" type="video/mp4">
+                                        <source src="<?php echo base_url("frontend")."/" ?>video/video.mp4" type="video/mp4">
 
 
                                     </video>

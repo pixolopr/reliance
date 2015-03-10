@@ -15,10 +15,10 @@ class Website extends CI_Controller
     public function sendfeedback()
     {
         $salut = $this->input->get_post("salut");
-        $name = $this->input->get_post("name");
-        $email = $this->input->get_post("email");
-        $fb = $this->input->get_post("fb");
-        $data['message']=$this->feedback_model->sendfb($salut,$name,$email,$fb);
+        $fname = $this->input->get_post("fname");
+        $mname = $this->input->get_post("mname");
+        $lname = $this->input->get_post("lname");
+        $data['message']=$this->feedback_model->sendfb($salut,$fname,$mname,$lname);
         //$data['message']=$this->photos_model->getphotosbyfilter($albumid);
         $this->load->view( 'json', $data );	
     }
