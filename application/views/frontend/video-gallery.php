@@ -240,7 +240,7 @@ float: none;line-height:0">Views from those who matter.</p>
                         });   
                 };
                 
-                //callfilter();
+                callfilter();
                 
                 $(".videoalbumselect").change(function () {
                     albumid=$(this).val();

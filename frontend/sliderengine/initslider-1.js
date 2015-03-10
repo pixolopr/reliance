@@ -1,6 +1,6 @@
-
-
 function recallvideo() {
+
+    $(".amazingslider-wrapper-1").remove();
     var scripts = document.getElementsByTagName("script");
     var jsFolder = "";
     for (var i = 0; i < scripts.length; i++) {
@@ -8,7 +8,6 @@ function recallvideo() {
             jsFolder = scripts[i].src.substr(0, scripts[i].src.lastIndexOf("/") + 1);
     }
     jQuery("#amazingslider-1").amazingslider({
-
         sliderid: 1,
         jsfolder: jsFolder,
         width: 746,
@@ -197,6 +196,7 @@ function recallvideo() {
         textformat: {
 
         }
+
 
     });
 }
