@@ -23,7 +23,7 @@ function recallvideo() {
         addmargin: true,
         randomplay: false,
         isresponsive: true,
-        pauseonmouseover: false,
+        pauseonmouseover: true,
         playvideoonclickthumb: true,
         slideinterval: 5000,
         transitiononfirstslide: false,
