@@ -732,6 +732,8 @@ only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
 
 img.eve-img {
     margin: 30px auto;
+    height: 120px;
+    width: 225px;
 }
 
 .mid-event p {
@@ -1069,3 +1071,4 @@ color: #999;
 content: "";
 pointer-events: none;
 }
+

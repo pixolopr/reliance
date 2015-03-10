@@ -271,8 +271,13 @@ float: none;line-height:0">Views from those who matter.</p>
             <div class="col-md-10">
 
                 <div class="vid-des">
-                    <h4>stalwarts speaks - <span> loren ipsum loren ipsum loren ipsum loren ipsum</span></h4>
-                    <p>share<span><a href="http://www.facebook.com/pages/Reliance-Digital/123437217685421" target="_blank"><i class="fa fa-facebook"></i></a><a href="http://www.twitter.com/reliancedigital" target="_blank"><i class="fa fa-twitter"></i></a></span>
+<!--                    <h4>stalwarts speaks - <span> loren ipsum loren ipsum loren ipsum loren ipsum</span></h4>-->
+                    <p>share<span><a class="fb-share-button" style="padding-left:15px;"data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count"></a>
+                    
+                    <a style="margin-top:10px;" class="twitter-share-button"
+href="https://twitter.com/share" ></a></span>
+                    
+                    
                     </p>
                 </div>
             </div>
@@ -280,11 +285,22 @@ float: none;line-height:0">Views from those who matter.</p>
     </div>
     <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.gallery.js"></script>
     <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.slicknav.js"></script>
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=329228207248886&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('#menu').slicknav();
         });
     </script>
+    <script>
+window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
+</script>
 
 </body>
 

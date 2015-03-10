@@ -26,6 +26,7 @@
    <script src="<?php echo base_url("frontend")."/" ?>js/jquery-2.1.3.min.js"></script>
     <script src="<?php echo base_url("frontend")."/" ?>fancy/jquery.fancybox.pack.js"></script>
     <script src="<?php echo base_url("frontend")."/" ?>fancy/jquery.fancybox.js"></script>
+
     
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <!--    <script src="<?php echo base_url("frontend")."/" ?>js/script.js"></script>-->
@@ -174,7 +175,27 @@
                         <button type="button" class="enter">ENTER</button>
 <!--                            <div id="response"></div>-->
                         </div>
-                        <div style="display: none;color: #4D4D4D;padding: 15px;text-align: center;background: rgb(253, 253, 253);font-family: open sans;" id="resp">Your feedback is appreciated</div>
+                        <div style="display: none;color: #4D4D4D;padding: 15px;text-align: center;background: rgb(253, 253, 253);font-family: open sans;" id="resp"><div class="left-form">
+                                         <select class="clas salut">
+                           <?php foreach($salutations as $salut) { ?>
+                            <option value="<?php echo $salut->id; ?>"><?php echo $salut->name; ?></option>
+                            <?php }; ?>
+
+                        </select>
+                        
+                        <br>
+                        <input class="fname" type="text" name="fname" value="FIRST NAME *">
+                        <input class="mname" type="text" name="mname" value="MIDDLE NAME *">
+                        <input class="lname" type="text" name="lname" value="LAST NAME *">
+                        <p><sup>*</sup>INDICATES A REQUIRED FEILD.</p>
+                        <div class="left-btn text-center">
+                        <a class="fancybox1" href="#resp" rel="gallery"></a>
+                        <button type="button" class="enter">ENTER</button>
+<!--                            <div id="response"></div>-->
+                        </div>
+                        </div>
+                        
+                        </div>
             <script>
             
             var salutation = 0;
@@ -310,8 +331,8 @@ float: none;">
     <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.slicknav.js"></script>
       <script>
     $(".fancybox1").fancybox({
-        width	: 300,
-				height	: 300,
+        width	:'100%',
+				height	: '100%',
     openEffect: 'none',
     closeEffect: 'none',
     nextEffect: 'none',
