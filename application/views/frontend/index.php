@@ -166,36 +166,52 @@
                         </select>
                         
                         <br>
-                        <input class="fname" type="text" name="fname" value="FIRST NAME *">
-                        <input class="mname" type="text" name="mname" value="MIDDLE NAME *">
-                        <input class="lname" type="text" name="lname" value="LAST NAME *">
+                        <input class="fname" type="text" name="fname" placeholder="FIRST NAME *">
+                        <input class="mname" type="text" name="mname" placeholder="MIDDLE NAME *">
+                        <input class="lname" type="text" name="lname" placeholder="LAST NAME *">
                         <p><sup>*</sup>INDICATES A REQUIRED FEILD.</p>
                         <div class="left-btn text-center">
-                        <a class="fancybox1" href="#resp" rel="gallery"></a>
-                        <button type="button" class="enter">ENTER</button>
+                        <a class="" href="#resp" rel="gallery"></a>
+                        <button type="button" class="enter" id="enterr">ENTER</button>
 <!--                            <div id="response"></div>-->
                         </div>
-                        <div style="display: none;color: #4D4D4D;padding: 15px;text-align: center;background: rgb(253, 253, 253);font-family: open sans;" id="resp"><div class="left-form">
-                                         <select class="clas salut">
-                           <?php foreach($salutations as $salut) { ?>
-                            <option value="<?php echo $salut->id; ?>"><?php echo $salut->name; ?></option>
-                            <?php }; ?>
+                        <div style="display: none;color: #4D4D4D;padding: 15px;text-align: center;background: rgb(253, 253, 253);font-family: open sans;" id="resp">Your feedback is appreciated</div>
+                        
+                        <div class="set-form" >
+                            <div class="left-form">
+                                   <img class="ss-img" src="<?php echo base_url("frontend")."/" ?>images/close.png">
+                                    <h2>hi shalini,</h2> 
+                                    <h4>we look forward to your feedback..</h4> 
 
                         </select>
                         
                         <br>
-                        <input class="fname" type="text" name="fname" value="FIRST NAME *">
-                        <input class="mname" type="text" name="mname" value="MIDDLE NAME *">
-                        <input class="lname" type="text" name="lname" value="LAST NAME *">
+                        <input class="fname" type="text" name="fname" placeholder="DESIGNATION">
+                        <input class="mname" type="text" name="mname" placeholder="ORGANIZATION">
+                        <input class="lname" type="text" name="lname" placeholder="EMAIL ID">
+                        <textarea style="margin-top:10px;" rows="4" cols="50" placeholder="COMMENTS/FEEDBACK">
+
+</textarea>
                         <p><sup>*</sup>INDICATES A REQUIRED FEILD.</p>
-                        <div class="left-btn text-center">
-                        <a class="fancybox1" href="#resp" rel="gallery"></a>
-                        <button type="button" class="enter">ENTER</button>
+                        <div class="left-btns text-center">
+                        
+                        <button type="button" class="enter">SUBMIT</button>
 <!--                            <div id="response"></div>-->
                         </div>
+                            </div>
                         </div>
+                        <script>
+                            $(document).ready(function () {
+                    $(".set-form").hide();
+                                $("#enterr").click(function() {
+                                $(".set-form").show();
+                                });
+                                 $(".ss-img").click(function() {
+                                $(".set-form").hide();
+                                });
+        });
+                    </script>
                         
-                        </div>
             <script>
             
             var salutation = 0;
@@ -331,8 +347,8 @@ float: none;">
     <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.slicknav.js"></script>
       <script>
     $(".fancybox1").fancybox({
-        width	:'100%',
-				height	: '100%',
+        width	: 300,
+				height	: 300,
     openEffect: 'none',
     closeEffect: 'none',
     nextEffect: 'none',
