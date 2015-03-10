@@ -64,7 +64,7 @@ return $query;
     }
     public function get1000photos()
     {
-        $query=$this->db->query("SELECT * FROM `reliance_photos` WHERE `photoalbum`= 2 ORDER BY `order`")->result();
+        $query=$this->db->query("SELECT * FROM `reliance_photos` WHERE `photoalbum`= 10 ORDER BY `order`")->result();
         return $query;
     }
 }

@@ -170,7 +170,8 @@
                         <input class="lname" type="text" name="lname" value="LAST NAME *">
                         <p><sup>*</sup>INDICATES A REQUIRED FEILD.</p>
                         <div class="left-btn text-center">
-                            <a class="fancybox1" href="#resp" rel="gallery"><button type="button" class="enter">ENTER</button></a>
+                        <a class="fancybox1" href="#resp" rel="gallery"></a>
+                        <button type="button" class="enter">ENTER</button>
 <!--                            <div id="response"></div>-->
                         </div>
                         <div style="display: none;color: #4D4D4D;padding: 15px;text-align: center;background: rgb(253, 253, 253);font-family: open sans;" id="resp">Your feedback is appreciated</div>
@@ -186,7 +187,7 @@
                 function showresult(data) {
                     //var location = ''+location.protocol+'//'+location.host+'/reliance/uploads/';
 //                    $("#response").html('<p style="color: rgb(9, 9, 9);font-weight: bolder;background: white;padding: 6px 6px 12px 13px;text-align: center;font-family: open sans;border-radius: 4px;">Your feedback is appreciated</p>');
-                    $("#resp").css('display','inline-block');
+                    $( ".fancybox1" ).trigger( "click" );
                     
                 };
                 
