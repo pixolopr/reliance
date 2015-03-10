@@ -26,6 +26,7 @@
    <script src="<?php echo base_url("frontend")."/" ?>js/jquery-2.1.3.min.js"></script>
     <script src="<?php echo base_url("frontend")."/" ?>fancy/jquery.fancybox.pack.js"></script>
     <script src="<?php echo base_url("frontend")."/" ?>fancy/jquery.fancybox.js"></script>
+
     
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <!--    <script src="<?php echo base_url("frontend")."/" ?>js/script.js"></script>-->
@@ -165,16 +166,52 @@
                         </select>
                         
                         <br>
-                        <input class="fname" type="text" name="fname" value="FIRST NAME *">
-                        <input class="mname" type="text" name="mname" value="MIDDLE NAME *">
-                        <input class="lname" type="text" name="lname" value="LAST NAME *">
+                        <input class="fname" type="text" name="fname" placeholder="FIRST NAME *">
+                        <input class="mname" type="text" name="mname" placeholder="MIDDLE NAME *">
+                        <input class="lname" type="text" name="lname" placeholder="LAST NAME *">
                         <p><sup>*</sup>INDICATES A REQUIRED FEILD.</p>
                         <div class="left-btn text-center">
-                        <a class="fancybox1" href="#resp" rel="gallery"></a>
-                        <button type="button" class="enter">ENTER</button>
+                        <a class="" href="#resp" rel="gallery"></a>
+                        <button type="button" class="enter" id="enterr">ENTER</button>
 <!--                            <div id="response"></div>-->
                         </div>
                         <div style="display: none;color: #4D4D4D;padding: 15px;text-align: center;background: rgb(253, 253, 253);font-family: open sans;" id="resp">Your feedback is appreciated</div>
+                        
+                        <div class="set-form" >
+                            <div class="left-form">
+                                   <img class="ss-img" src="<?php echo base_url("frontend")."/" ?>images/close.png">
+                                    <h2>hi shalini,</h2> 
+                                    <h4>we look forward to your feedback..</h4> 
+
+                        </select>
+                        
+                        <br>
+                        <input class="fname" type="text" name="fname" placeholder="DESIGNATION">
+                        <input class="mname" type="text" name="mname" placeholder="ORGANIZATION">
+                        <input class="lname" type="text" name="lname" placeholder="EMAIL ID">
+                        <textarea style="margin-top:10px;" rows="4" cols="50" placeholder="COMMENTS/FEEDBACK">
+
+</textarea>
+                        <p><sup>*</sup>INDICATES A REQUIRED FEILD.</p>
+                        <div class="left-btns text-center">
+                        
+                        <button type="button" class="enter">SUBMIT</button>
+<!--                            <div id="response"></div>-->
+                        </div>
+                            </div>
+                        </div>
+                        <script>
+                            $(document).ready(function () {
+                    $(".set-form").hide();
+                                $("#enterr").click(function() {
+                                $(".set-form").show();
+                                });
+                                 $(".ss-img").click(function() {
+                                $(".set-form").hide();
+                                });
+        });
+                    </script>
+                        
             <script>
             
             var salutation = 0;
