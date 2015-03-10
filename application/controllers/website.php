@@ -8,7 +8,8 @@ class Website extends CI_Controller
 		$data["title"]="Reliance";
         $data["eventmenu"]=$this->events_model->geteventmenu();
         $data["salutations"]=$this->feedback_model->getsalutions();
-        $data['indexphotos']=$this->photos_model->getalbumfirstphotos();
+        //$data['indexphotos']=$this->photos_model->getalbumfirstphotos();
+        $data['indexphotos']=$this->photos_model->get1000photos();
         $this->load->view("frontend/index",$data);
 	}
     public function sendfeedback()

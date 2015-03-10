@@ -62,5 +62,10 @@ return $query;
         $query=$this->db->query("SELECT `reliance_photos`.`image` as `image`,`reliance_photoalbum`.`id` as `id`  FROM `reliance_photos` INNER JOIN `reliance_photoalbum` ON `reliance_photoalbum`.`id` = `reliance_photos`.`photoalbum` GROUP BY `reliance_photos`.`photoalbum` ORDER BY `reliance_photos`.`order`")->result();
         return $query;
     }
+    public function get1000photos()
+    {
+        $query=$this->db->query("SELECT * FROM `reliance_photos` WHERE `photoalbum`= 2 ORDER BY `order`")->result();
+        return $query;
+    }
 }
 ?>
