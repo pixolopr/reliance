@@ -280,8 +280,8 @@ float: none;line-height:0">Views from those who matter.</p>
 <!--                    <h4>stalwarts speaks - <span> loren ipsum loren ipsum loren ipsum loren ipsum</span></h4>-->
                     <p>share<span><a class="fb-share-button" style="padding-left:15px;"data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count"></a>
                     
-                    <a style="margin-top:10px;" class="twitter-share-button"
-href="https://twitter.com/share" ></a></span>
+                    <span class="inline-block"><a style="margin-top:10px;" class="twitter-share-button" href="https://twitter.com/share" ></a></span>
+                   </span>
                     
                     
                     </p>
