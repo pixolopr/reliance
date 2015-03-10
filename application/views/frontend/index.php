@@ -165,9 +165,9 @@
                         </select>
                         
                         <br>
-                        <input class="fname" type="text" name="fname" value="First Name *">
-                        <input class="mname" type="text" name="mname" value="Middle Name *">
-                        <input class="lname" type="text" name="lname" value="Last Name *">
+                        <input class="fname" type="text" name="fname" value="FIRST NAME *">
+                        <input class="mname" type="text" name="mname" value="MIDDLE NAME *">
+                        <input class="lname" type="text" name="lname" value="LAST NAME *">
                         <p><sup>*</sup>INDICATES A REQUIRED FEILD.</p>
                         <div class="left-btn text-center">
                             <button type="button" class="enter">ENTER</button>
@@ -238,7 +238,7 @@
                         <div class="dg-wrapper">
                               
                             <?php foreach($indexphotos as $photo) { ?>
-                             <a class="fancybox img-responsive" rel="group" href="<?php echo site_url("website")."/photogallery?id=".$photo->id; ?>"><img src="<?php echo base_url("uploads")."/".$photo->image; ?>" alt="image02" class="img-responsive">
+                             <a class="fancybox img-responsive" rel="group" href="<?php echo base_url("uploads")."/".$photo->image; ?>"><img src="<?php echo base_url("uploads")."/".$photo->image; ?>" alt="image02" class="img-responsive">
 
                             </a>
                             <?php }; ?>

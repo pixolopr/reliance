@@ -181,7 +181,7 @@ float: none;line-height:0">captured & showcased under one roof!</p>
             <div class="gallert-set scroll">
                <!--<?php foreach($photos as $photo) { ?>
                 <div class="col-md-4 set-img img-responsive" >
-                    <a class="fancybox img-responsive" rel="group" href="<?php echo base_url("uploads")."/".$photo->image; ?>"> <img class="img-responsive" src="<?php echo base_url("uploads")."/".$photo->image; ?>">
+                    <a class="fancybox img-responsive" rel="group" href="<?php echo base_url("uploads")."/".$photo->image; ?>"> <img class="pht-img img-responsive" src="<?php echo base_url("uploads")."/".$photo->image; ?>">
                     </a>
                 </div>
                 <?php }; ?>-->

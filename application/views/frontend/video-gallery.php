@@ -271,7 +271,7 @@ float: none;line-height:0">Views from those who matter.</p>
 
                 <div class="vid-des">
                     <h4>stalwarts speaks - <span> loren ipsum loren ipsum loren ipsum loren ipsum</span></h4>
-                    <p>share<span><a href="http://www.facebook.com/pages/Reliance-Digital/123437217685421"><i class="fa fa-facebook"></i></a><a href="http://www.twitter.com/reliancedigital"><i class="fa fa-twitter"></i></a></span>
+                    <p>share<span><a href="http://www.facebook.com/pages/Reliance-Digital/123437217685421" target="_blank"><i class="fa fa-facebook"></i></a><a href="http://www.twitter.com/reliancedigital" target="_blank"><i class="fa fa-twitter"></i></a></span>
                     </p>
                 </div>
             </div>
