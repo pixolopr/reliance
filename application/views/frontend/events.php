@@ -58,7 +58,7 @@
     	<script type="text/javascript">
 	
 		$(document).ready(function() {
-			$('#liquid1').liquidcarousel({height:150, duration:600, hidearrows:false});
+			$('#liquid1').liquidcarousel({height:90, duration:600, hidearrows:false});
 		});
 
 	</script>

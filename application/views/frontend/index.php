@@ -183,15 +183,11 @@
                                     <h2>hi shalini,</h2> 
                                     <h4>we look forward to your feedback..</h4> 
 
-                        </select>
                         
-                        <br>
                         <input class="fname" type="text" name="fname" placeholder="DESIGNATION">
                         <input class="mname" type="text" name="mname" placeholder="ORGANIZATION">
                         <input class="lname" type="text" name="lname" placeholder="EMAIL ID">
-                        <textarea style="margin-top:10px;" rows="4" cols="50" placeholder="COMMENTS/FEEDBACK">
-
-</textarea>
+                        <textarea style="margin-top:10px;" rows="4" cols="50" placeholder="COMMENTS / FEEDBACK"></textarea>
                         <p><sup>*</sup>INDICATES A REQUIRED FEILD.</p>
                         <div class="left-btns text-center">
                         
