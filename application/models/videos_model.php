@@ -47,5 +47,15 @@ public function delete($id)
 $query=$this->db->query("DELETE FROM `reliance_videos` WHERE `id`='$id'");
 return $query;
 }
+    public function getallvideos()
+    {
+        $query=$this->db->query("SELECT * FROM `reliance_videos` ORDER BY `order`")->result();
+        return $query; 
+    }
+    public function getvideosbyfilter($id)
+    {
+        $query=$this->db->query("SELECT * FROM `reliance_videos` WHERE `photoalbum`= '$id' ORDER BY `order`")->result();
+        return $query;
+    }
 }
 ?>

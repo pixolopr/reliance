@@ -47,5 +47,20 @@ public function delete($id)
 $query=$this->db->query("DELETE FROM `reliance_photos` WHERE `id`='$id'");
 return $query;
 }
+    public function getallphotos()
+    {
+        $query=$this->db->query("SELECT * FROM `reliance_photos` ORDER BY `order`")->result();
+        return $query; 
+    }
+    public function getphotosbyfilter($id)
+    {
+        $query=$this->db->query("SELECT * FROM `reliance_photos` WHERE `photoalbum`= '$id' ORDER BY `order`")->result();
+        return $query;
+    }
+    public function getalbumfirstphotos()
+    {
+        $query=$this->db->query("SELECT `reliance_photos`.`image` as `image`,`reliance_photoalbum`.`id` as `id`  FROM `reliance_photos` INNER JOIN `reliance_photoalbum` ON `reliance_photoalbum`.`id` = `reliance_photos`.`photoalbum` GROUP BY `reliance_photos`.`photoalbum` ORDER BY `reliance_photos`.`order`")->result();
+        return $query;
+    }
 }
 ?>

@@ -10,39 +10,39 @@
     <link rel="shortcut icon" href="">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/slider.css">
-    <link rel="stylesheet" href="css/mobile.css">
-<!--    <link rel="stylesheet" href="css/flexslider.css">-->
-    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/slider.css">
+    <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/mobile.css">
+<!--    <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/flexslider.css">-->
+    <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/jquery.bxslider.css">
     
 
-    <link type='text/css' rel='stylesheet' href='css/liquidcarousel.css' />
+    <link type='text/css' rel='stylesheet' href='<?php echo base_url("frontend")."/" ?>css/liquidcarousel.css' />
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <!--    <script src="js/script.js"></script>-->
+    <!--    <script src="<?php echo base_url("frontend")."/" ?>js/script.js"></script>-->
 <!--
-  <link rel="stylesheet" href="css/font-awesome.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/font-awesome.css">
+    <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/font-awesome.min.css">
 -->
 <!--
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/bootstrap-theme.min.css">
 -->
-    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="<?php echo base_url("frontend")."/" ?>js/jquery-2.1.3.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <!--    <script src="sliderengine/jquery.js"></script>-->
 <!--    <script src="sliderengine/amazingslider.js"></script>-->
 <!--    <link rel="stylesheet" type="text/css" href="sliderengine/amazingslider-1.css">-->
 <!--    <script src="sliderengine/initslider-1.js"></script>-->
-<!--    <script src="js/jquery.flexslider-min.js"></script>-->
-    <script src="js/jquery.bxslider.js"></script>
-    <script src="js/jquery.fitvids.js"></script>
-    <script src="js/jquery.liquidcarousel.js"></script>
+<!--    <script src="<?php echo base_url("frontend")."/" ?>js/jquery.flexslider-min.js"></script>-->
+    <script src="<?php echo base_url("frontend")."/" ?>js/jquery.bxslider.js"></script>
+    <script src="<?php echo base_url("frontend")."/" ?>js/jquery.fitvids.js"></script>
+    <script src="<?php echo base_url("frontend")."/" ?>js/jquery.liquidcarousel.js"></script>
     
        <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
         
-      <link rel="stylesheet" href="css/slicknav.css">
+      <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/slicknav.css">
       
       <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
     
@@ -74,19 +74,18 @@
        
             <div class="mobile-menu hidden-md hidden-lg">
                 <ul id="menu">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="<?php echo site_url("website/index"); ?>">Home</a></li>
                     <li class="avtives">Digital Events
                         <ul>
-                            <li><a href="events.html">250 store event</a>
+                           <?php foreach($eventmenu as $event) { ?>
+                            <li><a href="<?php echo site_url("website/event")."?id=".$event->id; ?>"><?php echo $event->name; ?></a>
                             </li>
-                            <li><a href="#">1000 store event</a>
-                            </li>
-
+                            <?php }; ?>
                         </ul>
                     </li>
-                    <li><a href="photo-gallery.html">photo gallery</a>
+                    <li><a href="<?php echo site_url("website/photogallery"); ?>">photo gallery</a>
                     </li>
-                        <li><a href="video-gallery.html">video gallery</a></li>
+                        <li><a href="<?php echo site_url("website/videogallery"); ?>">video gallery</a></li>
 <!--                        <li><a href="#">comment scribbles</a></li>-->
                 </ul>
 
@@ -96,7 +95,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="home-logo">
-                      <a href="index.html"> <img src="images/logo.png"></a>
+                      <a href="<?php echo site_url("website/index"); ?>"> <img src="<?php echo base_url("frontend")."/" ?>images/logo.png"></a>
                 </div>
             </div>
             <div class="col-md-6">
@@ -105,7 +104,7 @@
                     <i class="fa fa-twitter"></i>
                     <i class="fa fa-google-plus"></i>
                     <i class="fa fa-linkedin-square"></i>
-                    <img src="images/reliance.png">
+                    <img src="<?php echo base_url("frontend")."/" ?>images/reliance.png">
                 </div>
             </div>
         </div>
@@ -116,36 +115,34 @@
 
                         <ul>
                             <li>
-                                <a href='index.html' ><img src="images/home-menu.png">
+                                <a href='<?php echo site_url("website/index"); ?>' ><img src="<?php echo base_url("frontend")."/" ?>images/home-menu.png">
                                     <br><span>HOME</span>
                                 </a>
                             </li>
                             <li class='has-sub'>
-                                <a href='#'class="actives"><img src="images/calendar.png">
+                                <a href='#'class="actives"><img src="<?php echo base_url("frontend")."/" ?>images/calendar.png">
                                     <br><span>DIGITAL <br>EVENTS</span>
                                 </a>
                                 <ul>
-                                    <li class='has-sub'><a href='events.html'><span>250 STORE EVENT</span></a>
-
+                                    <?php foreach($eventmenu as $event) { ?>
+                                    <li class='has-sub'><a href="<?php echo site_url("website/event")."?id=".$event->id; ?>"><span><?php echo $event->name; ?></span></a>
                                     </li>
-                                    <li class='has-sub'><a href='#'><span>1000 STORE EVENT</span></a>
-
-                                    </li>
+                                    <?php }; ?>
                                 </ul>
                             </li>
                             <li>
-                                <a href='photo-gallery.html'><img src="images/camera.png">
+                                <a href='<?php echo site_url("website/photogallery"); ?>'><img src="<?php echo base_url("frontend")."/" ?>images/camera.png">
                                     <br><span>photo<br> gallery</span>
                                 </a>
                             </li>
                             <li>
-                                <a href='video-gallery.html'><img src="images/video.png">
+                                <a href='<?php echo site_url("website/videogallery"); ?>'><img src="<?php echo base_url("frontend")."/" ?>images/video.png">
                                     <br><span>video<br> gallery</span>
                                 </a>
                             </li>
                             <li class='last'>
 <!--
-                                <a href='#'><img src="images/note.png">
+                                <a href='#'><img src="<?php echo base_url("frontend")."/" ?>images/note.png">
                                     <br><span>comment <br>scribbles</span>
                                 </a>
 -->
@@ -156,7 +153,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="head-img">
-                        <img src="images/1000.png">
+                        <img src="<?php echo base_url("frontend")."/" ?>images/1000.png">
                     </div>
                 </div>
             </div>
@@ -164,27 +161,24 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="set-event text-center">
-                    <img class="eve-img" src="images/event.png">
+                    <img class="eve-img" src="<?php echo base_url("uploads")."/".$eventdata->image; ?>">
 
                     <div class="mid-event">
-                        <img src="images/cale.png">
+                        <img src="<?php echo base_url("frontend")."/" ?>images/cale.png">
                         <p style="text-decoration:underline;"> date</p>
                         <p>26 february,2015</p>
                     </div>
                     <div class="loc-mid">
-                        <img src="images/location.png">
+                        <img src="<?php echo base_url("frontend")."/" ?>images/location.png">
                         <p style="text-decoration:underline;">held at</p>
-                        <p>four seasons,worli</p>
+                        <p><?php echo $eventdata->venue; ?></p>
                     </div>
                     <div class="not-mid">
-                        <img src="images/notes.png">
+                        <img src="<?php echo base_url("frontend")."/" ?>images/notes.png">
                         <p>description</p>
                     </div>
                     <div class="eve-det">
-                        <p>lorem ipsum lorem ipsum lorem ipsum</p>
-                        <p>lorem ipsum lorem ipsum lorem ipsum</p>
-                        <p>lorem ipsum lorem ipsum lorem ipsum</p>
-                        <p>lorem ipsum lorem ipsum lorem ipsum</p>
+                        <p><?php echo $eventdata->description; ?> </p>
                     </div>
                 </div>
 
@@ -214,19 +208,10 @@ padding-bottom: 10px;">
 	<span class="previous"></span>
 	<div class="wrapper">
 		<ul>
-			<li><a href="#" title="image 01"><img src="images/1.jpg" width="126" height="126" alt="image 01" border="0" /></a></li>
-			<li><a href="#" title="image 02"><img src="images/2.jpg" width="126" height="126" alt="image 02" border="0" /></a></li>
-			<li><a href="#" title="image 03"><img src="images/3.jpg" width="126" height="126" alt="image 03" border="0" /></a></li>
-			<li><a href="#" title="image 04"><img src="images/4.jpg" width="126" height="126" alt="image 04" border="0" /></a></li>
-			<li><a href="#" title="image 05"><img src="images/5.jpg" width="126" height="126" alt="image 05" border="0" /></a></li>
-						<li><a href="#" title="image 01"><img src="images/1.jpg" width="126" height="126" alt="image 01" border="0" /></a></li>
-			<li><a href="#" title="image 02"><img src="images/2.jpg" width="126" height="126" alt="image 02" border="0" /></a></li>
-			<li><a href="#" title="image 03"><img src="images/3.jpg" width="126" height="126" alt="image 03" border="0" /></a></li>
-			<li><a href="#" title="image 04"><img src="images/4.jpg" width="126" height="126" alt="image 04" border="0" /></a></li>
-			<li><a href="#" title="image 05"><img src="images/5.jpg" width="126" height="126" alt="image 05" border="0" /></a></li>
-
-
-		</ul>
+		<?php foreach($eventphotos as $eventphoto) { ?>
+			<li><a href="#" title="<?php echo $eventphoto->name; ?>"><img src="<?php echo base_url("uploads")."/".$eventphoto->image ?>" width="126" height="126" alt="<?php echo $eventphoto->name; ?>" border="0" /></a></li>
+       <?php }; ?>
+        </ul>
 	</div>
 	<span class="next"></span>
 </div>
@@ -263,20 +248,21 @@ padding-bottom: 10px;">
                             <!-- Wrapper for slides -->
                             <div class="carousel-inner" role="listbox">
                                 <div class="item active">
-                                    <iframe src="http://player.vimeo.com/video/17914974" width="550" height="250" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                                    <iframe src="<?php echo "https://www.youtube.com/embed/".$eventvideos[0]->url; ?>" width="550" height="250" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                                 </div>
-
+                                <?php for($i=1;$i<count($eventvideos);$i++) { ?>
                                 <div class="item">
-                                    <iframe src="http://player.vimeo.com/video/17914974" width="550" height="250" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                                    <iframe src="<?php echo "https://www.youtube.com/embed/".$eventvideos[$i]->url; ?>" width="550" height="250" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                                 </div>
+                                <?php }; ?>
 
 
                                 <!-- Left and right controls -->
                                 <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                                    <img src="images/left-event.png">
+                                    <img src="<?php echo base_url("frontend")."/" ?>images/left-event.png">
                                 </a>
                                 <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                                    <img src="images/right-event.png">
+                                    <img src="<?php echo base_url("frontend")."/" ?>images/right-event.png">
                                 </a>
                             </div>
                         </div>
@@ -288,8 +274,8 @@ padding-bottom: 10px;">
             <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
            
 -->
-                <script type="text/javascript" src="js/jquery.gallery.js"></script>
-       <script type="text/javascript" src="js/jquery.slicknav.js"></script>
+                <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.gallery.js"></script>
+       <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.slicknav.js"></script>
         <script type="text/javascript">
         $(document).ready(function () {
             $('#menu').slicknav();

@@ -48,5 +48,17 @@ public function delete($id)
 $query=$this->db->query("DELETE FROM `reliance_feedback` WHERE `id`='$id'");
 return $query;
 }
+    public function sendfb($s, $n, $e, $f)
+    {
+        $query=$this->db->query("INSERT INTO `reliance_feedback` (salutation,firstname,email,middlename)
+VALUES ('$s','$n','$e','$f')");
+        return $query; 
+    }
+    public function getsalutions()
+    {
+        $query=$this->db->query("SELECT * FROM `salutation`")->result();
+        return $query; 
+    }
+    
 }
 ?>

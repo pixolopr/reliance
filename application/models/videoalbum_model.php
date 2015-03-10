@@ -36,5 +36,10 @@ public function delete($id)
 $query=$this->db->query("DELETE FROM `reliance_videoalbum` WHERE `id`='$id'");
 return $query;
 }
+    public function getall()
+    {
+        $query=$this->db->query("SELECT * FROM `reliance_videoalbum` ORDER BY `order`")->result();
+        return $query;
+    }
 }
 ?>

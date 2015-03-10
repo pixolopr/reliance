@@ -16,20 +16,20 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/slider.css">
-     <link href="fancy/jquery.fancybox.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/slider.css">
+     <link href="<?php echo base_url("frontend")."/" ?>fancy/jquery.fancybox.css" rel="stylesheet" type="text/css">
 
-    <link rel="stylesheet" href="css/slicknav.css">
-    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/slicknav.css">
+    <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/mobile.css">
 
-   <script src="js/jquery-2.1.3.min.js"></script>
-    <script src="fancy/jquery.fancybox.pack.js"></script>
-    <script src="fancy/jquery.fancybox.js"></script>
+   <script src="<?php echo base_url("frontend")."/" ?>js/jquery-2.1.3.min.js"></script>
+    <script src="<?php echo base_url("frontend")."/" ?>fancy/jquery.fancybox.pack.js"></script>
+    <script src="<?php echo base_url("frontend")."/" ?>fancy/jquery.fancybox.js"></script>
     
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<!--    <script src="js/script.js"></script>-->
-    <script type="text/javascript" src="js/modernizr.custom.53451.js"></script>
+<!--    <script src="<?php echo base_url("frontend")."/" ?>js/script.js"></script>-->
+    <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/modernizr.custom.53451.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
    
@@ -40,19 +40,18 @@
      
             <div class="mobile-menu hidden-md hidden-lg">
                 <ul id="menu">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="<?php echo site_url("website/index"); ?>">Home</a></li>
                     <li class="avtives">Digital Events
                         <ul>
-                            <li><a href="events.html">250 store event</a>
+                           <?php foreach($eventmenu as $event) { ?>
+                            <li><a href="<?php echo site_url("website/event")."?id=".$event->id; ?>"><?php echo $event->name; ?></a>
                             </li>
-                            <li><a href="#">1000 store event</a>
-                            </li>
-
+                            <?php }; ?>
                         </ul>
                     </li>
-                    <li><a href="photo-gallery.html">photo gallery</a>
+                    <li><a href="<?php echo site_url("website/photogallery"); ?>">photo gallery</a>
                     </li>
-                        <li><a href="video">video gallery</a></li>
+                        <li><a href="<?php echo site_url("website/videogallery"); ?>">video gallery</a></li>
 <!--                        <li><a href="#">comment scribbles</a></li>-->
                 </ul>
 
@@ -63,7 +62,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="home-logo">
-                   <a href="index.html"> <img src="images/logo.png" class="img-responsive"></a>
+                   <a href="<?php echo site_url("website/index"); ?>"> <img src="<?php echo base_url("frontend")."/" ?>images/logo.png" class="img-responsive"></a>
                 </div>
             </div>
             <div class="col-md-6">
@@ -72,7 +71,7 @@
                     <a href="http://www.twitter.com/reliancedigital"><i class="fa fa-twitter"></i></a>
                     <a href="https://plus.google.com/116542364512862317573"><i class="fa fa-google-plus"></i></a>
                     <a href="https://in.linkedin.com/pub/reliance-digital/35/1b9/721"><i class="fa fa-linkedin-square"></i></a>
-                    <a href="www.reliancedigital.in"><img src="images/reliance.png">
+                    <a href="www.reliancedigital.in"><img src="<?php echo base_url("frontend")."/" ?>images/reliance.png">
                     </a>
                 </div>
             </div>
@@ -84,36 +83,34 @@
 
                         <ul>
                             <li>
-                                <a href='index.html' class="actives"><img src="images/home-menu.png">
+                                <a href='<?php echo site_url("website/index"); ?>' class="actives"><img src="<?php echo base_url("frontend")."/" ?>images/home-menu.png">
                                     <br><span>HOME</span>
                                 </a>
                             </li>
                             <li class='has-sub'>
-                                <a href='#'><img src="images/calendar.png">
+                                <a href='#'><img src="<?php echo base_url("frontend")."/" ?>images/calendar.png">
                                     <br><span>DIGITAL <br>EVENTS</span>
                                 </a>
                                 <ul>
-                                    <li class='has-sub'><a href='events.html'><span>250 STORE EVENT</span></a>
-
+                                   <?php foreach($eventmenu as $event) { ?>
+                                    <li class='has-sub'><a href='<?php echo site_url("website/event")."?id=".$event->id; ?>'><span><?php echo $event->name; ?></span></a>
                                     </li>
-                                    <li class='has-sub'><a href='#'><span>1000 STORE EVENT</span></a>
-
-                                    </li>
+                                    <?php }; ?>
                                 </ul>
                             </li>
                             <li>
-                                <a href='photo-gallery.html'><img src="images/camera.png">
+                                <a href='<?php echo site_url("website/photogallery"); ?>'><img src="<?php echo base_url("frontend")."/" ?>images/camera.png">
                                     <br><span>photo<br> gallery</span>
                                 </a>
                             </li>
                             <li>
-                                <a href='video-gallery.html'><img src="images/video.png">
+                                <a href='<?php echo site_url("website/videogallery"); ?>'><img src="<?php echo base_url("frontend")."/" ?>images/video.png">
                                     <br><span>video<br> gallery</span>
                                 </a>
                             </li>
                             <li class='last'>
 <!--
-                                <a href='#'><img src="images/note.png">
+                                <a href='#'><img src="<?php echo base_url("frontend")."/" ?>images/note.png">
                                     <br><span>comment <br>scribbles</span>
                                 </a>
 -->
@@ -124,7 +121,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="head-img">
-                        <img src="images/1000.png">
+                        <img src="<?php echo base_url("frontend")."/" ?>images/1000.png">
                     </div>
                 </div>
             </div>
@@ -139,7 +136,7 @@
                                     <div class="midd-img">
 
                                         <div class="col-md-6">
-                                            <img style="padding-top: 18px;"src="images/left-cont.png" class="img-responsive">
+                                            <img style="padding-top: 18px;"src="<?php echo base_url("frontend")."/" ?>images/left-cont.png" class="img-responsive">
                                         </div>
                                         <div class="col-md-6">
                                            <div class="dis-set">
@@ -160,21 +157,58 @@
                 <div class="mid-right">
                     <h3>share a feedback</h3>
                     <div class="left-form">
-                        <select class="clas">
-                            <option value="volvo">MR.</option>
-                            <option value="volvo">MISS.</option>
-                            <option value="saab">MRS.</option>
+                        <select class="clas salut">
+                           <?php foreach($salutations as $salut) { ?>
+                            <option value="<?php echo $salut->id; ?>"><?php echo $salut->name; ?></option>
+                            <?php }; ?>
 
                         </select>
                         
                         <br>
-                        <input type="text" name="FirstName" value="FIRST NAME *">
-                        <input type="text" name="FirstName" value="MIDDLE NAME *">
-                        <input type="text" name="FirstName" value="LAST NAME *">
+                        <input class="name" type="text" name="name" value="Name *">
+                        <input class="email" type="text" name="email" value="E-mail *">
+                        <input class="fb" type="text" name="feedback" value="Feedback *">
                         <p><sup>*</sup>INDICATES A REQUIRED FEILD.</p>
                         <div class="left-btn text-center">
-                            <button type="button">ENTER</button>
+                            <button type="button" class="enter">ENTER</button>
+                            <div class="response"></div>
                         </div>
+            <script>
+            
+            var salutation = 0;
+            var name="";
+            var email="";
+            var feedback="";
+            //var location = location.protocol+'//'+location.host+'/reliance/uploads/';
+            $(document).ready(function() {
+                
+                function showresult(data) {
+                    //var location = ''+location.protocol+'//'+location.host+'/reliance/uploads/';
+                    $(".response").html('<p style="top:-10px;font-size:inherit;color: white;font-weight: bolder;">Your feedback is appreciated</p>');
+                    
+                };
+                
+                
+                function submit(){
+                    
+                    console.log("submit");
+                        $.getJSON("<?php echo site_url("website/sendfeedback"); ?>",{salut:salutation, name:name, email:email, fb:feedback},function(data) {
+                            console.log(data);
+                            showresult(data);
+                        });   
+                };
+                $(".enter").click(function () {
+                    console.log("clicked");
+                    salutation = $(".salut").val();
+                    name=$(".name").val();
+                    email=$(".email").val();
+                    feedback=$(".fb").val();
+                    submit();
+                });
+                
+                
+            });
+        </script>
                     </div>
                 </div>
             </div>
@@ -202,15 +236,13 @@
                             <span class="dg-next">&gt;</span>
                         </nav>
                         <div class="dg-wrapper">
-                              <a class="fancybox img-responsive" rel="group" href="images/Yj0l7iGKh8g.jpg"> <img src="images/Home.png" alt="image01" class="img-responsive">
+                              
+                            <?php foreach($indexphotos as $photo) { ?>
+                             <a class="fancybox img-responsive" rel="group" href="<?php echo site_url("website")."/photogallery?id=".$photo->id; ?>"><img src="<?php echo base_url("uploads")."/".$photo->image; ?>" alt="image02" class="img-responsive">
 
                             </a>
-                             <a class="fancybox img-responsive" rel="group" href="images/Yj0l7iGKh8g.jpg"><img src="images/Home.png" alt="image02" class="img-responsive">
-
-                            </a>
-                           <a class="fancybox img-responsive" rel="group" href="images/Yj0l7iGKh8g.jpg"><img src="images/Home.png" alt="image03" class="img-responsive">
-
-                            </a>
+                            <?php }; ?>
+                           
 
                         </div>
 
@@ -245,8 +277,8 @@ float: none;">
 
                             <div class="col-md-6">
                                 <div class="events-img text-center">
-                                    <img src="images/award.png" class="img-responsive">
-                                    <a href="video-gallery.html">
+                                    <img src="<?php echo base_url("frontend")."/" ?>images/award.png" class="img-responsive">
+                                    <a href="<?php echo site_url("website/videogallery"); ?>">
                                         <button type="submit">CLICK HERE</button>
                                     </a>
                                 </div>
@@ -269,8 +301,8 @@ float: none;">
     </div>
 <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/jquery.gallery.js"></script>
-    <script type="text/javascript" src="js/jquery.slicknav.js"></script>
+    <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.gallery.js"></script>
+    <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.slicknav.js"></script>
         <script>
         $(document).ready(function () {
                     $(".fancybox").fancybox({

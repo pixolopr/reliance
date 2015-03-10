@@ -36,5 +36,20 @@ public function delete($id)
 $query=$this->db->query("DELETE FROM `reliance_events` WHERE `id`='$id'");
 return $query;
 }
+public function geteventmenu()
+{
+    $query=$this->db->query("SELECT id, name FROM `reliance_events`")->result();
+    return $query;
+}
+    public function getphotos($id)
+    {
+        $query=$this->db->query("SELECT * FROM `reliance_photos` WHERE `photoalbum` = '$id' ORDER BY `order`")->result();
+        return $query;
+    }
+     public function getvideos($id)
+    {
+        $query=$this->db->query("SELECT * FROM `reliance_videos` WHERE `photoalbum` = '$id' ORDER BY `order`")->result();
+        return $query;
+    }
 }
 ?>

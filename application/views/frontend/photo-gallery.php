@@ -10,13 +10,13 @@
     <link rel="shortcut icon" href="">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/slider.css">
-    <link rel="stylesheet" href="css/mobile.css">
-    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/slider.css">
+    <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/mobile.css">
+    <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/jquery.mCustomScrollbar.css">
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <!--    <script src="js/script.js"></script>-->
+    <!--    <script src="<?php echo base_url("frontend")."/" ?>js/script.js"></script>-->
     <!--[if lt IE 9]>
 <script type="text/javascript" src="http://www.users.on.net/~nova/html5/js/CreateHTML5Elements.js">[B]</script>[/B]
 <![endif]-->
@@ -25,24 +25,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 -->
-    <script src="js/jquery-2.1.3.min.js"></script>
-    <script src="fancy/jquery.fancybox.pack.js"></script>
-    <script src="fancy/jquery.fancybox.js"></script>
+    <script src="<?php echo base_url("frontend")."/" ?>js/jquery-2.1.3.min.js"></script>
+    <script src="<?php echo base_url("frontend")."/" ?>fancy/jquery.fancybox.pack.js"></script>
+    <script src="<?php echo base_url("frontend")."/" ?>fancy/jquery.fancybox.js"></script>
     
      <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 
-    <link href="fancy/jquery.fancybox.css" rel="stylesheet" type="text/css">
-      <link rel="stylesheet" href="css/font-awesome.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-       <link rel="stylesheet" href="css/slicknav.css">
-    <link rel="stylesheet" href="css/mobile.css">
+    <link href="<?php echo base_url("frontend")."/" ?>fancy/jquery.fancybox.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/font-awesome.css">
+    <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/font-awesome.min.css">
+       <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/slicknav.css">
+    <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/mobile.css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
 <!--
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/bootstrap-theme.min.css">
 -->
 
-    <!--    <script type="text/javascript" src="js/modernizr.custom.53451.js"></script>-->
+    <!--    <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/modernizr.custom.53451.js"></script>-->
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -54,19 +54,18 @@
     
             <div class="mobile-menu hidden-md hidden-lg">
                 <ul id="menu">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="<?php echo site_url("website/index"); ?>">Home</a></li>
                     <li class="avtives">Digital Events
                         <ul>
-                            <li><a href="events.html">250 store event</a>
+                           <?php foreach($eventmenu as $event) { ?>
+                            <li><a href="<?php echo site_url("website/event")."?id=".$event->id; ?>"><?php echo $event->name; ?></a>
                             </li>
-                            <li><a href="#">1000 store event</a>
-                            </li>
-
+                            <?php }; ?>
                         </ul>
                     </li>
-                    <li><a href="photo-gallery.html">photo gallery</a>
+                    <li><a href="<?php echo site_url("website/photogallery"); ?>">photo gallery</a>
                     </li>
-                        <li><a href="video-gallery.html">video gallery</a></li>
+                        <li><a href="<?php echo site_url("website/videogallery"); ?>">video gallery</a></li>
 <!--                        <li><a href="#">comment scribbles</a></li>-->
                 </ul>
 
@@ -77,7 +76,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="home-logo">
-                      <a href="index.html"> <img src="images/logo.png"></a>
+                      <a href="<?php echo site_url("website/index"); ?>"> <img src="<?php echo base_url("frontend")."/" ?>images/logo.png"></a>
                 </div>
             </div>
             <div class="col-md-6">
@@ -86,7 +85,7 @@
                     <i class="fa fa-twitter"></i>
                     <i class="fa fa-google-plus"></i>
                     <i class="fa fa-linkedin-square"></i>
-                    <img src="images/reliance.png">
+                    <img src="<?php echo base_url("frontend")."/" ?>images/reliance.png">
                 </div>
             </div>
         </div>
@@ -97,36 +96,34 @@
 
                         <ul>
                             <li>
-                                <a href='index.html' ><img src="images/home-menu.png">
+                                <a href='<?php echo site_url("website/index"); ?>' ><img src="<?php echo base_url("frontend")."/" ?>images/home-menu.png">
                                     <br><span>HOME</span>
                                 </a>
                             </li>
                             <li class='has-sub'>
-                                <a href='#'><img src="images/calendar.png">
+                                <a href='#'><img src="<?php echo base_url("frontend")."/" ?>images/calendar.png">
                                     <br><span>DIGITAL <br>EVENTS</span>
                                 </a>
                                 <ul>
-                                    <li class='has-sub'><a href='events.html'><span>250 STORE EVENT</span></a>
-
+                                   <?php foreach($eventmenu as $event) { ?>
+                                    <li class='has-sub'><a href='<?php echo site_url("website/event")."?id=".$event->id; ?>'><span><?php echo $event->name; ?></span></a>
                                     </li>
-                                    <li class='has-sub'><a href='#'><span>1000 STORE EVENT</span></a>
-
-                                    </li>
+                                    <?php }; ?>
                                 </ul>
                             </li>
                             <li>
-                                <a href='photo-gallery.html' class="actives"><img src="images/camera.png">
+                                <a href='<?php echo site_url("website/photogallery"); ?>' class="actives"><img src="<?php echo base_url("frontend")."/" ?>images/camera.png">
                                     <br><span>photo<br> gallery</span>
                                 </a>
                             </li>
                             <li>
-                                <a href='video-gallery.html'><img src="images/video.png">
+                                <a href='<?php echo site_url("website/videogallery"); ?>'><img src="<?php echo base_url("frontend")."/" ?>images/video.png">
                                     <br><span>video<br> gallery</span>
                                 </a>
                             </li>
                             <li class='last'>
 <!--
-                                <a href='#'><img src="images/note.png">
+                                <a href='#'><img src="<?php echo base_url("frontend")."/" ?>images/note.png">
                                     <br><span>comment <br>scribbles</span>
                                 </a>
 -->
@@ -137,7 +134,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="head-img">
-                        <img src="images/1000.png">
+                        <img src="<?php echo base_url("frontend")."/" ?>images/1000.png">
                     </div>
                 </div>
             </div>
@@ -168,11 +165,11 @@ float: none;line-height:0">captured & showcased under one roof!</p>
                     </div>
                     <div class="col-md-6">
                         <div class="pic-set">
-                            <select>
-                                <option value="volvo">view all images</option>
-                                <option value="saab">Saab</option>
-                                <option value="opel">Opel</option>
-                                <option value="audi">Audi</option>
+                            <select class="albumselect">
+                                  <option value="0">View All Images</option>
+                               <?php foreach($photoalbums as $photoalbum) { ?>
+                                <option value="<?php echo $photoalbum->id; ?>"><?php echo $photoalbum->name; ?></option>
+                                <?php }; ?>
                             </select>
                         </div>
                     </div>
@@ -182,72 +179,63 @@ float: none;line-height:0">captured & showcased under one roof!</p>
         </div>
         <div class="row" style="padding-bottom:40px;">
             <div class="gallert-set scroll">
+               <!--<?php foreach($photos as $photo) { ?>
                 <div class="col-md-4 set-img img-responsive" >
-                    <a class="fancybox img-responsive" rel="group" href="images/Yj0l7iGKh8g.jpg"> <img class="img-responsive" src="images/gallery.png">
+                    <a class="fancybox img-responsive" rel="group" href="<?php echo base_url("uploads")."/".$photo->image; ?>"> <img class="img-responsive" src="<?php echo base_url("uploads")."/".$photo->image; ?>">
                     </a>
-
                 </div>
-               <div class="col-md-4 set-img img-responsive" >
-                    <a class="fancybox img-responsive" rel="group" href="images/Yj0l7iGKh8g.jpg" > <img class="img-responsive" src="images/gallery.png">
-                    </a>
-                   
-
-                </div>
-               <div class="col-md-4 set-img img-responsive" >
-                    <a class="fancybox img-responsive" rel="group" href="images/Yj0l7iGKh8g.jpg"> <img class="img-responsive" src="images/gallery.png">
-                    </a>
-
-                </div>
-               <div class="col-md-4 set-img img-responsive" >
-                    <a class="fancybox img-responsive" rel="group" href="images/Yj0l7iGKh8g.jpg"> <img class="img-responsive" src="images/gallery.png">
-                    </a>
-
-                </div>
-               <div class="col-md-4 set-img img-responsive" >
-                    <a class="fancybox img-responsive" rel="group" href="images/Yj0l7iGKh8g.jpg"> <img class="img-responsive" src="images/gallery.png">
-                    </a>
-
-                </div>
-              <div class="col-md-4 set-img img-responsive" >
-                    <a class="fancybox img-responsive" rel="group" href="images/Yj0l7iGKh8g.jpg"> <img class="img-responsive" src="images/gallery.png">
-                    </a>
-
-                </div>
-                <div class="col-md-4 set-img img-responsive" >
-                    <a class="fancybox img-responsive" rel="group" href="images/Yj0l7iGKh8g.jpg"> <img class="img-responsive" src="images/gallery.png">
-                    </a>
-
-                </div>
-              <div class="col-md-4 set-img img-responsive" >
-                    <a class="fancybox img-responsive" rel="group" href="images/Yj0l7iGKh8g.jpg"> <img class="img-responsive" src="images/gallery.png">
-                    </a>
-
-                </div>
-              <div class="col-md-4 set-img img-responsive" >
-                    <a class="fancybox img-responsive" rel="group" href="images/Yj0l7iGKh8g.jpg"> <img class="img-responsive" src="images/gallery.png">
-                    </a>
-
-                </div>          <div class="col-md-4 set-img img-responsive" >
-                    <a class="fancybox img-responsive" rel="group" href="images/Yj0l7iGKh8g.jpg"> <img class="img-responsive" src="images/gallery.png">
-                    </a>
-
-                </div>
-                          <div class="col-md-4 set-img img-responsive" >
-                    <a class="fancybox img-responsive" rel="group" href="images/Yj0l7iGKh8g.jpg"> <img class="img-responsive" src="images/gallery.png">
-                    </a>
-
-                </div>
-                          <div class="col-md-4 set-img img-responsive" >
-                    <a class="fancybox img-responsive" rel="group" href="images/Yj0l7iGKh8g.jpg"> <img class="img-responsive" src="images/gallery.png">
-                    </a>
-
-                </div>
+                <?php }; ?>-->
             </div>
         </div>
+        
+        
+        <script>
+            
+            
+            var albumid=0;
+            //var location = location.protocol+'//'+location.host+'/reliance/uploads/';
+            $(document).ready(function() {
+                
+                function addphotos(data) {
+                    //var location = ''+location.protocol+'//'+location.host+'/reliance/uploads/';
+                    $(".scroll").html("");
+                    var text = "";
+                    if(data.length == 0)
+                    {
+                        $(".scroll").html("<p>Currently, there are no photos in this album</p>");
+                    };
+                    for(var i=0;i<data.length;i++)
+                    {
+                        var text = '<div class="col-md-4 set-img img-responsive" ><a class="fancybox img-responsive" rel="group" href="<?php echo base_url("uploads")."/"; ?>'+data[i].image+'" ><img class="img-responsive" src="<?php echo base_url("uploads")."/"; ?>'+data[i].image+'"></a></div>';
+                        
+                            $(".scroll").append(text);
+                    };
+                };
+                
+                
+                function callfilter(){
+                    console.log("abhau");
+                        $.getJSON("<?php echo site_url("website/albumfilter"); ?>",{id:albumid},function(data) {
+                            console.log(data);
+                            addphotos(data);
+                        });   
+                };
+                
+                callfilter();
+                
+                $(".albumselect").change(function () {
+                    albumid=$(this).val();
+                    callfilter();
+                });
+                
+                
+            });
+        </script>
+        
     </div>
-       <script type="text/javascript" src="js/jquery.gallery.js"></script>
-       <script type="text/javascript" src="js/jquery.slicknav.js"></script>
-       <script type="text/javascript" src="js/jquery.mCustomScrollbar.min.js"></script>
+       <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.gallery.js"></script>
+       <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.slicknav.js"></script>
+       <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.mCustomScrollbar.min.js"></script>
        	<script>
 		(function($){
 			$(window).load(function(){
