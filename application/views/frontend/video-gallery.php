@@ -225,7 +225,8 @@ float: none;line-height:0">Views from those who matter.</p>
                     {
                         text = '<li><img src="http://img.youtube.com/vi/'+data[i].url+'/hqdefault.jpg" alt="The Lighter Side - Reliance Digital 1000 Store Celebration"/><video preload="none" src="http://www.youtube.com/embed/'+data[i].url+'"></video></li>';                        
                             $(".addvids").append(text);
-                        text2='<li><img src="<?php echo base_url("frontend")."/" ?>images/tMShlthBgKw-tn.jpg" alt="How To Install MIUI v6 on Xiaomi Redmi 1S" />';
+                        text2='<li><img src="http://img.youtube.com/vi/'+data[i].url+'/hqdefault.jpg" alt="How To Install MIUI v6 on Xiaomi Redmi 1S" />';
+                        $(".videothumbs").append(text);
                         
                     };
                     recallvideo();
