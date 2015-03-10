@@ -72,10 +72,10 @@ if($myserver!="localhost")
 {
 
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'wohligco_rel';
-$db['default']['password'] = 'chintan123';
-$db['default']['database'] = 'wohligco_reliance';
+$db['default']['hostname'] = '50.62.209.118:3306';
+$db['default']['username'] = 'rdforum1';
+$db['default']['password'] = 'rdforum!@#123';
+$db['default']['database'] = 'rd_forum';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
