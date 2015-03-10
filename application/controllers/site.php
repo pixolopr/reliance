@@ -14,7 +14,164 @@ class Site extends CI_Controller
 			redirect( base_url() . 'index.php/login', 'refresh' );
 		} //$is_logged_in !== 'true' || !isset( $is_logged_in )
 	}
-	function checkaccess($access)
+ public function createreviews()
+{
+$access=array("1");
+$this->checkaccess($access);
+$data["page"]="createreviews";
+
+$data["title"]="Create photos";
+$this->load->view("template",$data);
+}
+public function createreviewsssubmit() 
+{
+    $access=array("1");
+$this->checkaccess($access);
+$this->form_validation->set_rules("name","name","trim");
+$this->form_validation->set_rules("order","order","trim");
+//$this->form_validation->set_rules("image","image","trim");
+$this->form_validation->set_rules("photoalbum","photoalbum","trim");
+if($this->form_validation->run()==FALSE)
+{
+$data["alerterror"]=validation_errors();
+$data["page"]="createphotos";
+$data["title"]="Create photos";
+$this->load->view("template",$data);
+}
+else
+{
+$name=$this->input->get_post("name");
+$order=$this->input->get_post("order");
+//$image=$this->input->get_post("image");
+$photoalbum=$this->input->get_post("photoalbum");
+if($this->photos_model->create($name,$order,$image,$photoalbum)==0)
+$data["alerterror"]="New photos could not be created.";
+else
+$data["alertsuccess"]="photos created Successfully.";
+  $data["redirect"]="site/viewphotos?id=".$photoalbum;
+        $this->load->view("redirect2",$data);
+}
+}
+public function editusersreview()
+{
+$access=array("1");
+$this->checkaccess($access);
+$this->checkaccess($access);
+$data["page2"]="block/userrevieewblock";
+$data["title"]="Edit events";
+$data["page"]="editusersreview";
+$data["title"]="Edit photoalbum";
+//$data["status"]=$this->photoalbum_model->getstatusdropdown();
+$id=$this->input->get("id");
+$data["before"]=$this->relianceuser_model->beforeedit($id);
+  $this->load->view("templatewith2",$data);
+}
+public function viewreviews()
+{
+$access=array("1");
+$this->checkaccess($access);
+$data["page"]="viewuser";
+$data["page2"]="block/userrevieewblock";
+$reviewid=$this->input->get('id');
+$data['before']=$this->relianceuser_model->beforeedit1($reviewid);
+$data["title"]="View photos";
+$this->load->view("template",$data);
+
+}
+
+    function users_message()
+    {
+        $access = array("1");
+		$this->checkaccess($access);
+		$data['page']='viewusersmessage';
+        $data['base_url'] = site_url("site/usersmessagejson");
+        $data['title']='View Users';
+		$this->load->view('template',$data);
+    }
+        function  usersmessagejson()
+	{
+		$access = array("1");
+		$this->checkaccess($access);
+        
+        
+        $elements=array();
+        $elements[0]=new stdClass();
+        $elements[0]->field="`users`.`id`";
+        $elements[0]->sort="1";
+        $elements[0]->header="ID";
+        $elements[0]->alias="id";
+        
+        
+        $elements[1]=new stdClass();
+        $elements[1]->field="`users`.`name`";
+        $elements[1]->sort="1";
+        $elements[1]->header="Name";
+        $elements[1]->alias="name";
+        
+        $elements[2]=new stdClass();
+        $elements[2]->field="`users`.`email`";
+        $elements[2]->sort="1";
+        $elements[2]->header="email";
+        $elements[2]->alias="email";
+        
+        $elements[3]=new stdClass();
+        $elements[3]->field="`users`.`phone`";
+        $elements[3]->sort="1";
+        $elements[3]->header="phone";
+        $elements[3]->alias="phone";
+        
+        $elements[4]=new stdClass();
+        $elements[4]->field="`users`.`message`";
+        $elements[4]->sort="1";
+        $elements[4]->header="message";
+        $elements[4]->alias="message";
+//        
+        $elements[5]=new stdClass();
+        $elements[5]->field="`users`.`dots`";
+        $elements[5]->sort="1";
+        $elements[5]->header="dots";
+        $elements[5]->alias="dots";
+//       
+        $elements[6]=new stdClass();
+        $elements[6]->field="`users`.`jerseyscore`";
+        $elements[6]->sort="1";
+        $elements[6]->header="jerseyscore";
+        $elements[6]->alias="jerseyscore";
+//       
+        $elements[7]=new stdClass();
+        $elements[7]->field="`users`.`testtime`";
+        $elements[7]->sort="1";
+        $elements[7]->header="testtime";
+        $elements[7]->alias="testtime";
+       
+        $elements[8]=new stdClass();
+        $elements[8]->field="`users`.`certificate`";
+        $elements[8]->sort="1";
+        $elements[8]->header="certificate";
+        $elements[8]->alias="certificate";
+        
+        $search=$this->input->get_post("search");
+        $pageno=$this->input->get_post("pageno");
+        $orderby=$this->input->get_post("orderby");
+        $orderorder=$this->input->get_post("orderorder");
+        $maxrow=$this->input->get_post("maxrow");
+        if($maxrow=="")
+        {
+            $maxrow=20;
+        }
+        
+        if($orderby=="")
+        {
+            $orderby="id";
+            $orderorder="ASC";
+        }
+       
+        $data["message"]=$this->chintantable->query($pageno,$maxrow,$orderby,$orderorder,$search,$elements,"FROM `users`");
+        
+		$this->load->view("json",$data);
+	} 
+    
+	function  checkaccess($access)
 	{
 		$accesslevel=$this->session->userdata('accesslevel');
 		if(!in_array($accesslevel,$access))
@@ -387,6 +544,12 @@ $elements[6]->field="`reliance_videoalbum`.`name`";
 $elements[6]->sort="1";
 $elements[6]->header="videoalbum";
 $elements[6]->alias="videoalbum";
+$elements[7]=new stdClass();
+$elements[7]->field="`reliance_events`.`date`";
+$elements[7]->sort="1";
+$elements[7]->header="date";
+$elements[7]->alias="date";
+
 $search=$this->input->get_post("search");
 $pageno=$this->input->get_post("pageno");
 $orderby=$this->input->get_post("orderby");
@@ -473,7 +636,8 @@ $venue=$this->input->get_post("venue");
 $description=$this->input->get_post("description");
 $photoalbum=$this->input->get_post("photoalbum");
 $videoalbum=$this->input->get_post("videoalbum");
-if($this->events_model->create($name,$image,$venue,$description,$photoalbum,$videoalbum)==0)
+$date=$this->input->get_post("date");
+if($this->events_model->create($name,$image,$venue,$description,$photoalbum,$videoalbum,$date)==0)
 $data["alerterror"]="New events could not be created.";
 else
 $data["alertsuccess"]="events created Successfully.";
@@ -497,9 +661,28 @@ $data["before"]=$this->events_model->beforeedit($this->input->get("id"));
 }
 public function editeventssubmit()
 {
-$access=array("1");
-$this->checkaccess($access);
-     $config['upload_path'] = './uploads/';
+    $access=array("1");
+    $this->checkaccess($access);
+    $this->form_validation->set_rules("id","id","trim");
+    $this->form_validation->set_rules("name","name","trim");
+    //$this->form_validation->set_rules("image","image","trim");
+    $this->form_validation->set_rules("venue","venue","trim");
+    $this->form_validation->set_rules("description","description","trim");
+    $this->form_validation->set_rules("photoalbum","photoalbum","trim");
+    $this->form_validation->set_rules("videoalbum","videoalbum","trim");
+    if($this->form_validation->run()==FALSE)
+    {
+        $data["alerterror"]=validation_errors();
+        $data["page"]="editevents";
+        $data["title"]="Edit events";
+        $data["before"]=$this->events_model->beforeedit($this->input->get("id"));
+        $this->load->view("template",$data);
+    }
+    else
+    {
+        $id=$this->input->get_post("id");
+$name=$this->input->get_post("name");
+      $config['upload_path'] = './uploads/';
 			$config['allowed_types'] = 'gif|jpg|png|jpeg';
 			$this->load->library('upload', $config);
 			$filename="image";
@@ -508,36 +691,7 @@ $this->checkaccess($access);
 			{
 				$uploaddata = $this->upload->data();
 				$image=$uploaddata['file_name'];
-//                echo "the image is".$image;
-                $config_r['source_image']='./uploads/' . $uploaddata['file_name'];
-                $config_r['maintain_ratio']=TRUE;
-                $config_t['create_thumb']=FALSE;///add this
-                $config_r['width']=800;
-                $config_r['height']=800;
-                $config_r['quality']=100;
-                //end of configs
-
-                $this->load->library('image_lib', $config_r); 
-                $this->image_lib->initialize($config_r);
-                if(!$this->image_lib->resize())
-                {
-                    echo "Failed.".$this->image_lib->display_errors();
-                }  
-                else
-                {
-                    $image=$this->image_lib->dest_image;
-                }
-                
-			} $config['upload_path'] = './uploads/';
-			$config['allowed_types'] = 'gif|jpg|png|jpeg';
-			$this->load->library('upload', $config);
-			$filename="image";
-			$image="";
-			if ($this->upload->do_upload($filename))
-			{
-				$uploaddata = $this->upload->data();
-				$image=$uploaddata['file_name'];
-//                echo "the image is".$image;
+                echo "the image is".$image;
                 $config_r['source_image']='./uploads/' . $uploaddata['file_name'];
                 $config_r['maintain_ratio']=TRUE;
                 $config_t['create_thumb']=FALSE;///add this
@@ -558,31 +712,22 @@ $this->checkaccess($access);
                 }
                 
 			}
-$this->form_validation->set_rules("id","id","trim");
-$this->form_validation->set_rules("name","name","trim");
-//$this->form_validation->set_rules("image","image","trim");
-$this->form_validation->set_rules("venue","venue","trim");
-$this->form_validation->set_rules("description","description","trim");
-$this->form_validation->set_rules("photoalbum","photoalbum","trim");
-$this->form_validation->set_rules("videoalbum","videoalbum","trim");
-if($this->form_validation->run()==FALSE)
-{
-$data["alerterror"]=validation_errors();
-$data["page"]="editevents";
-$data["title"]="Edit events";
-$data["before"]=$this->events_model->beforeedit($this->input->get("id"));
-$this->load->view("template",$data);
-}
-else
-{
-$id=$this->input->get_post("id");
-$name=$this->input->get_post("name");
+        if($image=="")
+        {
+        $image=$this->events_model->getimage($id);
+          $image=$image->image;
+//            echo "image is".$image;
+//            
+        }
+
 //$image=$this->input->get_post("image");
 $venue=$this->input->get_post("venue");
 $description=$this->input->get_post("description");
 $photoalbum=$this->input->get_post("photoalbum");
 $videoalbum=$this->input->get_post("videoalbum");
-if($this->events_model->edit($id,$name,$image,$venue,$description,$photoalbum,$videoalbum)==0)
+$date=$this->input->get_post("date");
+    
+if($this->events_model->edit($id,$name,$image,$venue,$description,$photoalbum,$videoalbum,$date)==0)
 $data["alerterror"]="New events could not be Updated.";
 else
 $data["alertsuccess"]="events Updated Successfully.";
@@ -906,6 +1051,9 @@ $this->load->view("template",$data);
 }
 else
 {
+    $id=$this->input->get_post("id");
+$name=$this->input->get_post("name");
+$order=$this->input->get_post("order");
       $config['upload_path'] = './uploads/';
 			$config['allowed_types'] = 'gif|jpg|png|jpeg';
 			$this->load->library('upload', $config);
@@ -936,9 +1084,14 @@ else
                 }
                 
 			}
-$id=$this->input->get_post("id");
-$name=$this->input->get_post("name");
-$order=$this->input->get_post("order");
+       if($image=="")
+        {
+        $image=$this->photos_model->getimagephoto($id);
+          $image=$image->image;
+//            echo "image is".$image;
+//            
+        }
+
 //$image=$this->input->get_post("image");
 $photoalbum=$this->input->get_post("photoalbum");
 if($this->photos_model->edit($id,$name,$order,$image,$photoalbum)==0)
@@ -955,7 +1108,7 @@ $access=array("1");
 $this->checkaccess($access);
 $this->photos_model->delete($this->input->get("id"));
   $photoalbum=$this->input->get("photoid");
-    echo "photo album is".$photoalbum;
+//    echo "photo album is".$photoalbum;
  $data["redirect"]="site/viewphotos?id=".$photoalbum;
     $this->load->view("redirect2",$data);
 }
@@ -1103,7 +1256,7 @@ $this->checkaccess($access);
        $data["page"]="viewvideos";
         $data["page2"]="block/reliancevideoblock";
         $photoalbumid=$this->input->get('id');
-    echo "video is".$photoalbumid;
+//    echo "video is".$photoalbumid;
     $data['before']=$this->videoalbum_model->beforeedit($photoalbumid);
 //     $data['before']=$this->campaign_model->beforeedit($photoalbumid);
 //    echo "campaign is".$photoalbumid;
@@ -1172,7 +1325,6 @@ public function createvideos()
 $access=array("1");
 $this->checkaccess($access);
 $data["page"]="createvideos";
-$data["photoalbum"]=$this->videos_model->getvideoalbumdropdown();  
 $data["title"]="Create videos";
 $this->load->view("template",$data);
 }
@@ -1196,7 +1348,7 @@ else
 $name=$this->input->get_post("name");
 $order=$this->input->get_post("order");
 $photoalbum=$this->input->get_post("videoalbum");
-    echo "video id is".$photoalbum;
+//    echo "video id is".$photoalbum;
 $url=$this->input->get_post("url");
 if($this->videos_model->create($name,$order,$photoalbum,$url)==0)
 $data["alerterror"]="New videos could not be created.";
@@ -1254,7 +1406,7 @@ $access=array("1");
 $this->checkaccess($access);
 $this->videos_model->delete($this->input->get("id"));
 $photoalbum=$this->input->get("videoid");
- echo "photo album is".$photoalbum;
+// echo "photo album is".$photoalbum;
  $data["redirect"]="site/viewvideos?id=".$photoalbum;
     $this->load->view("redirect2",$data);
 }
@@ -1420,37 +1572,14 @@ $data["redirect"]="site/viewfeedback";
 $this->load->view("redirect",$data);
 }
 }
-    public function deletefeedback()
-    {
-        $access=array("1");
-        $this->checkaccess($access);
-        $this->feedback_model->delete($this->input->get("id"));
-        $data["redirect"]="site/viewfeedback";
-        $this->load->view("redirect",$data);
-    }
-    
-    public function multipleimageupload()
-    {
-        $data["photoalbum"]=$this->input->get_post("photoalbum");
-        $data["before"]=new stdClass();
-        $data["before"]->id=$this->input->get_post("photoalbum");
-        $access=array("1");
-        $this->checkaccess($access);
-        $data["page2"]="block/relianceblock";
-        $data["title"]="Multiple Image Uploads";
-        $data["page"]="multipleimageupload";
-        $this->load->view("templatewith2",$data);
-    }
-    public function multipleimageuploadjson()
-    {
-        $name=$this->input->get_post("name");
-        $order=0;
-        $image=$this->input->get_post("image");
-        $photoalbum=$this->input->get_post("photoalbum");
-        $this->photos_model->create($name,$order,$image,$photoalbum);
-        $data["message"]="multipleimageupload";
-        $this->load->view("json",$data);
-    }
+public function deletefeedback()
+{
+$access=array("1");
+$this->checkaccess($access);
+$this->feedback_model->delete($this->input->get("id"));
+$data["redirect"]="site/viewfeedback";
+$this->load->view("redirect",$data);
+}
 
 }
 ?>
