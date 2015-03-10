@@ -67,10 +67,10 @@
             </div>
             <div class="col-md-6">
                 <div class="home-soci">
-                    <a href="http://www.facebook.com/pages/Reliance-Digital/123437217685421"><i class="fa fa-facebook-official"></i></a>
-                    <a href="http://www.twitter.com/reliancedigital"><i class="fa fa-twitter"></i></a>
-                    <a href="https://plus.google.com/116542364512862317573"><i class="fa fa-google-plus"></i></a>
-                    <a href="https://in.linkedin.com/pub/reliance-digital/35/1b9/721"><i class="fa fa-linkedin-square"></i></a>
+                    <a href="http://www.facebook.com/pages/Reliance-Digital/123437217685421" target="_blank"><i class="fa fa-facebook-official"></i></a>
+                    <a href="http://www.twitter.com/reliancedigital"><i class="fa fa-twitter"  target="_blank"></i></a>
+                    <a href="https://plus.google.com/116542364512862317573"  target="_blank"><i class="fa fa-google-plus"></i></a>
+                    <a href="https://in.linkedin.com/pub/reliance-digital/35/1b9/721"  target="_blank"><i class="fa fa-linkedin-square"></i></a>
                     <a href="www.reliancedigital.in"><img src="<?php echo base_url("frontend")."/" ?>images/reliance.png">
                     </a>
                 </div>
