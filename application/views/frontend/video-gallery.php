@@ -213,7 +213,10 @@ float: none;line-height:0">Views from those who matter.</p>
                 
                 function addvideos(data) {
                     $(".addvids").html("");
+                    $(".videothumbs").html("");
                     var text = "";
+                    var text2="";
+                    
                     if(data.length == 0)
                     {
                         $(".addvids").html("<p>Currently, there are no Videos in this album</p>");
@@ -222,9 +225,10 @@ float: none;line-height:0">Views from those who matter.</p>
                     {
                         text = '<li><img src="http://img.youtube.com/vi/'+data[i].url+'/hqdefault.jpg" alt="The Lighter Side - Reliance Digital 1000 Store Celebration"/><video preload="none" src="http://www.youtube.com/embed/'+data[i].url+'"></video></li>';                        
                             $(".addvids").append(text);
+                        text2='<li><img src="<?php echo base_url("frontend")."/" ?>images/tMShlthBgKw-tn.jpg" alt="How To Install MIUI v6 on Xiaomi Redmi 1S" />';
                         
-                        recallvideo();
                     };
+                    recallvideo();
                 };
                 
                 
@@ -246,7 +250,7 @@ float: none;line-height:0">Views from those who matter.</p>
             });
         </script>
                                 
-                                <ul class="amazingslider-thumbnails" style="display:none;">
+                                <ul class="amazingslider-thumbnails videothumbs" style="display:none;">
                                     <li><img src="<?php echo base_url("frontend")."/" ?>images/tmeOjFno6Do-tn.jpg" alt="Marvel&apos;s &quot;Avengers: Age of Ultron&quot; - Teaser Trailer (OFFICIAL)" />
                                     </li>
                                     <li><img src="<?php echo base_url("frontend")."/" ?>images/tMShlthBgKw-tn.jpg" alt="How To Install MIUI v6 on Xiaomi Redmi 1S" />
