@@ -1110,3 +1110,6 @@ a.left.carousel-control img {
 .left-form input[type=textarea]:focus {
     background: rgb(77, 77, 77);
 }
+.thn {
+    padding: 50px;
+}

@@ -182,6 +182,7 @@
                         <div class="set-form" >
                             <div class="left-form">
                                    <img class="ss-img" src="<?php echo base_url("frontend")."/" ?>images/close.png">
+                                   <div class="hide-set">
                                     <h2>hi <span class="userfirstname2">shalini</span>,</h2> 
                                     <h4>we look forward to your feedback..</h4> 
 
@@ -197,6 +198,7 @@
                             
 <!--<div id="response"></div>-->
                         </div>
+                           </div>
                             <div class="thn">
                                 <h2>Your feedback is appreciated</h2>
                             </div>
@@ -229,6 +231,7 @@
                                 $(".feedbacksend").click(function() {
                                     //$(".set-form").hide();
                                     $(".thn").show();
+                                    $(".hide-set").hide();
                                     $(".designation").val('');
                                     $(".organization").val('');
                                     $(".email").val('');
