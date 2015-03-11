@@ -198,7 +198,7 @@
 <!--<div id="response"></div>-->
                         </div>
                             <div class="thn">
-                                <h2>Thankyou</h2>
+                                <h5 style="font-weight:bold;padding-bottom:20px;"> Thank you for sharing your feedback.</h5>
                             </div>
                             </form>
                            
