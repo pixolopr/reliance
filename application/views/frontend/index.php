@@ -443,7 +443,28 @@ float: none;">
     </script>
        
         <script>
+             function msieversion() {
+
+        var ua = window.navigator.userAgent;
+        var msie = ua.indexOf("MSIE ");
+
+        if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))      // If Internet Explorer, return version number
+            return true;
+        else                 // If another browser, return 0
+            return false;
+
+   return false;
+}
+            
+            
         $(document).ready(function () {
+            
+           if(  msieversion() )
+           {
+               $(".dis-set p").css("font-size","10px");
+           }
+            
+            
                     $(".fancybox").fancybox({
                        
                     
