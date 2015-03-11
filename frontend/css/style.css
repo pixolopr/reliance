@@ -919,6 +919,26 @@ a.left.carousel-control img {
     height: 100px !important;
     background: none !important;
 }
+.amazingslider-bullet-1-6 {
+    height: 100px !important;
+    background: none !important;
+}
+.amazingslider-bullet-1-7 {
+    height: 100px !important;
+    background: none !important;
+}
+.amazingslider-bullet-1-8 {
+    height: 100px !important;
+    background: none !important;
+}
+.amazingslider-bullet-1-9 {
+    height: 100px !important;
+    background: none !important;
+}
+.amazingslider-bullet-1-10 {
+    height: 100px !important;
+    background: none !important;
+}
 .amazingslider-car-right-arrow-1 {
     left: 33px !important;
 }
@@ -1083,4 +1103,10 @@ a.left.carousel-control img {
 }
 .left-form select option {
     color: black;
+}
+.left-form input[type=text]:focus {
+    background: rgb(77, 77, 77);
+}
+.left-form input[type=textarea]:focus {
+    background: rgb(77, 77, 77);
 }

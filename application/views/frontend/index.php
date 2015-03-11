@@ -243,17 +243,17 @@
                             showresult(data);
                         });   
                 };
-                $(".enter").click(function () {
-                    console.log("clicked");
-                    salutation = $(".salut").val();
-                    fname=$(".fname").val();
-                    mname=$(".mname").val();
-                    lname=$(".lname").val();
-                    if(fname != "")
-                    {
-                    submit();
-                    };
-                });
+//                $(".enter").click(function () {
+//                    console.log("clicked");
+//                    salutation = $(".salut").val();
+//                    fname=$(".fname").val();
+//                    mname=$(".mname").val();
+//                    lname=$(".lname").val();
+//                    if(fname != "")
+//                    {
+//                    submit();
+//                    };
+//                });
                 
                 
             });
