@@ -25,11 +25,12 @@ class Website extends CI_Controller
     }
     public function sendfeedbackdetails()
     {
+        $id = $this->input->get_post("id");
         $designation = $this->input->get_post("designation");
         $organization = $this->input->get_post("organization");
         $email = $this->input->get_post("email");
         $feedback = $this->input->get_post("feedback");
-        $data['message']=$this->feedback_model->sendfbd($designation,$organization,$email,$feedback);
+        $data['message']=$this->feedback_model->sendfbd($id,$designation,$organization,$email,$feedback);
         
         //'INSERT INTO '
         //$data['message']=$this->photos_model->getphotosbyfilter($albumid);

@@ -189,7 +189,7 @@
                         <input class="designation" type="text" name="fname" placeholder="DESIGNATION" >
                         <input class="organization" type="text" name="mname" placeholder="ORGANIZATION">
                         <input class="email" type="text" name="lname" placeholder="EMAIL ID">
-                        <textarea class="feedback" style="margin-top:10px;" rows="4" cols="50" placeholder="COMMENTS / FEEDBACK"></textarea>
+                        <textarea class="comments" style="margin-top:10px;" rows="4" cols="50" placeholder="COMMENTS / FEEDBACK"></textarea>
                         <p><sup>*</sup>INDICATES A REQUIRED FEILD.</p>
                         <div class="left-btns text-center">
                         <a class="fancybox1" href="#resp" rel="gallery"></a>
@@ -198,7 +198,7 @@
 <!--<div id="response"></div>-->
                         </div>
                             <div class="thn">
-                                <h2>Your feedback is appreciated</h2>
+                                <h2>Thankyou</h2>
                             </div>
                             </div>
                            
@@ -208,6 +208,11 @@
                                     firstname= '';
                                         middlename='';
                                         lastname='';
+                                designation= '';
+                                        organization='';
+                                        email='';
+                                comments = '';
+                                id = 0;
                                 
                                 $(".set-form").hide();
                                 $(".thn").hide();
@@ -228,9 +233,11 @@
                                         
                                         $.getJSON("<?php echo site_url("website/sendfeedback"); ?>",{salut:salutation, fname:firstname, mname:middlename, lname:lastname},function(data) {
                             console.log(data);
+                                            id = data;
                             showresult(data);
                                            
-                        });   
+                        }); 
+                                          
                                         return false;
                                     };
                                      
@@ -241,17 +248,32 @@
                                     $(".thn").hide();
                                 });
                                 
-                                $(".feedbacksend").click(function() {
-                                    //$(".set-form").hide();
+                                var feedbackresult = function()
+                                {
                                     $(".thn").show();
                                     $(".designation").val('');
                                     $(".organization").val('');
                                     $(".email").val('');
-                                    $(".feedback").val('');
+                                    $(".comments").val('');
                                     
-                                        $(".firstform .fname").val('');
-                                        $(".firstform .mname").val('');
-                                        $(".firstform .lname").val('');
+                                        $(".fname").val('');
+                                        $(".mname").val('');
+                                        $(".lname").val('');
+                                };
+                                
+                                $(".feedbacksend").click(function() {
+                                    designation  = $(".designation").val();
+                                    email = $(".email").val();
+                                    organization = $(".organization").val();
+                                    comments = $(".comments").val();
+                                    //$(".set-form").hide();
+                                    $.getJSON("<?php echo site_url("website/sendfeedbackdetails"); ?>",{id:id,designation:designation, organization:organization, email:email, comments:comments},function(data) {
+                            console.log(data);
+                            feedbackresult(data);
+                                           
+                        }); 
+                                    
+                                    
                                     //$( ".fancybox1" ).trigger( "click" );
                                 });
         });
