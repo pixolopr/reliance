@@ -166,13 +166,15 @@
                         </select>
                         
                         <br>
-                        <input class="fname userfirstname" type="text" name="fname" placeholder="FIRST NAME *">
-                        <input class="mname" type="text" name="mname" placeholder="MIDDLE NAME *">
-                        <input class="lname" type="text" name="lname" placeholder="LAST NAME *">
+                        <form action="#" class="firstform">
+                        <input class="fname userfirstname" required type="text" name="fname" placeholder="FIRST NAME *">
+                        <input class="mname" type="text" required name="mname" placeholder="MIDDLE NAME *">
+                        <input class="lname" type="text" required name="lname" placeholder="LAST NAME *">
                         <p><sup>*</sup>INDICATES A REQUIRED FEILD.</p>
                         <div class="left-btn text-center">
                         <a class="" href="#resp" rel="gallery"></a>
-                        <button type="button" class="enter" id="enterr">ENTER</button>
+                        <button type="submit" class="enter" id="enterr">ENTER</button>
+                        </form>
 <!--                            <div id="response"></div>-->
                         </div>
                         <div style="display: none;color: #4D4D4D;padding: 15px;text-align: center;background: rgb(253, 253, 253);font-family: open sans;" id="resp">Your feedback is appreciated</div>
@@ -184,24 +186,30 @@
                                     <h4>we look forward to your feedback..</h4> 
 
                         
-                        <input class="fname" type="text" name="fname" placeholder="DESIGNATION">
+                        <input class="fname" type="text" name="fname" placeholder="DESIGNATION" >
                         <input class="mname" type="text" name="mname" placeholder="ORGANIZATION">
                         <input class="lname" type="text" name="lname" placeholder="EMAIL ID">
                         <textarea style="margin-top:10px;" rows="4" cols="50" placeholder="COMMENTS / FEEDBACK"></textarea>
                         <p><sup>*</sup>INDICATES A REQUIRED FEILD.</p>
                         <div class="left-btns text-center">
                         
-                        <button type="button" class="enter">SUBMIT</button>
+                        <button type="button"  class="enter">SUBMIT</button>
 <!--                            <div id="response"></div>-->
                         </div>
                             </div>
                         </div>
                         <script>
                             $(document).ready(function () {
-                    $(".set-form").hide();
+                                $(".set-form").hide();
                                 $("#enterr").click(function() {
-                                    $(".userfirstname2").text($(".userfirstname").val());
-                                $(".set-form").show();
+                                    var firstname=$(".firstform .fname").val();
+                                    var middlename=$(".firstform .mname").val();
+                                    var lastname=$(".firstform .lname").val();
+                                    if(firstname!='' && middlename!='' && lastname!='')
+                                    {
+                                        $(".userfirstname2").text(firstname);
+                                        $(".set-form").show();
+                                    }
                                     
                                 });
                                  $(".ss-img").click(function() {
