@@ -166,7 +166,7 @@
                         </select>
                         
                         <br>
-                        <input class="fname" type="text" name="fname" placeholder="FIRST NAME *">
+                        <input class="fname userfirstname" type="text" name="fname" placeholder="FIRST NAME *">
                         <input class="mname" type="text" name="mname" placeholder="MIDDLE NAME *">
                         <input class="lname" type="text" name="lname" placeholder="LAST NAME *">
                         <p><sup>*</sup>INDICATES A REQUIRED FEILD.</p>
@@ -180,7 +180,7 @@
                         <div class="set-form" >
                             <div class="left-form">
                                    <img class="ss-img" src="<?php echo base_url("frontend")."/" ?>images/close.png">
-                                    <h2>hi shalini,</h2> 
+                                    <h2>hi <span class="userfirstname2">shalini</span>,</h2> 
                                     <h4>we look forward to your feedback..</h4> 
 
                         
@@ -200,7 +200,9 @@
                             $(document).ready(function () {
                     $(".set-form").hide();
                                 $("#enterr").click(function() {
+                                    $(".userfirstname2").text($(".userfirstname").val());
                                 $(".set-form").show();
+                                    
                                 });
                                  $(".ss-img").click(function() {
                                 $(".set-form").hide();
