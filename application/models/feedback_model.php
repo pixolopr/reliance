@@ -57,7 +57,7 @@ VALUES ('$s','$f','$m','$l')");
     }
     public function sendfbd($i, $d, $o, $e, $f)
     {
-        $query=$this->db->query("UPDATE `reliance_feedback` SET `designation` = '$d', `organisation` = '$o', `email` = '$e' , `comments`='$c' WHERE `id` = '$i'");
+        $query=$this->db->query("UPDATE `reliance_feedback` SET `designation` = '$d', `organisation` = '$o', `email` = '$e' , `comments`='$f' WHERE `id` = '$i'");
         $query=$this->db->query("SELECT * FROM  `reliance_feedback` WHERE `id`='$i'")->row();
         return $query; 
         
