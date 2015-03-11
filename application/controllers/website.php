@@ -29,9 +29,20 @@ class Website extends CI_Controller
         $designation = $this->input->get_post("designation");
         $organization = $this->input->get_post("organization");
         $email = $this->input->get_post("email");
-        $feedback = $this->input->get_post("feedback");
+        $feedback = $this->input->get_post("comments");
         $data['message']=$this->feedback_model->sendfbd($id,$designation,$organization,$email,$feedback);
-        
+        $details=$data['message'];
+        $this->load->library('email');
+
+        $this->email->from('info@reliance.com', 'Your Name');
+        $this->email->to('yesha@gozoop.in'); 
+
+        $this->email->subject('Submit Form Reliance');
+        $this->email->message("Firstname: $details->firstname \n Middlename: $details->middlename \n Lastname: $details->lastname \n Designation: $designation \n Organization: $organization \n Email: $email \n Comments: $feedback");	
+
+        $this->email->send();
+
+
         //'INSERT INTO '
         //$data['message']=$this->photos_model->getphotosbyfilter($albumid);
         $this->load->view( 'json', $data );	
