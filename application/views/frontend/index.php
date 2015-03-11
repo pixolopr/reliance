@@ -180,7 +180,7 @@
                         <div style="display: none;color: #4D4D4D;padding: 15px;text-align: center;background: rgb(253, 253, 253);font-family: open sans;" id="resp">Your feedback is appreciated</div>
                         
                         <div class="set-form" >
-                            <div class="left-form">
+                            <form class="left-form innerform">
                                    <img class="ss-img" src="<?php echo base_url("frontend")."/" ?>images/close.png">
                                     <h2>hi <span class="userfirstname2">shalini</span>,</h2> 
                                     <h4>we look forward to your feedback..</h4> 
@@ -188,22 +188,26 @@
                         
                         <input class="designation" type="text" name="fname" placeholder="DESIGNATION" >
                         <input class="organization" type="text" name="mname" placeholder="ORGANIZATION">
-                        <input class="email" type="text" name="lname" placeholder="EMAIL ID">
+                        <input class="email" type="email" name="lname" placeholder="EMAIL ID">
                         <textarea class="comments" style="margin-top:10px;" rows="4" cols="50" placeholder="COMMENTS / FEEDBACK"></textarea>
                         <p><sup>*</sup>INDICATES A REQUIRED FIELD.</p>
                         <div class="left-btns text-center">
                         <a class="fancybox1" href="#resp" rel="gallery"></a>
-                        <button type="button"  class="feedbacksend">SUBMIT</button>
+                        <button type="submit"  class="feedbacksend">SUBMIT</button>
                             
 <!--<div id="response"></div>-->
                         </div>
                             <div class="thn">
                                 <h2>Thankyou</h2>
                             </div>
-                            </div>
+                            </form>
                            
                         </div>
                         <script>
+                            function isValidEmailAddress(emailAddress) {
+    var pattern = new RegExp(/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i);
+    return pattern.test(emailAddress);
+};
                             $(document).ready(function () {
                                     firstname= '';
                                         middlename='';
@@ -261,12 +265,19 @@
                                         $(".lname").val('');
                                 };
                                 
-                                $(".feedbacksend").click(function() {
+                                $(".feedbacksend").click(function(evt) {
                                     designation  = $(".designation").val();
                                     email = $(".email").val();
                                     organization = $(".organization").val();
                                     comments = $(".comments").val();
+                                    
+                                    if($(".innerform")[0].checkValidity() === false) {
+                                      return true;
+                                    }
+
+                                    evt.preventDefault();
                                     //$(".set-form").hide();
+                                    
                                     $.getJSON("<?php echo site_url("website/sendfeedbackdetails"); ?>",{id:id,designation:designation, organization:organization, email:email, comments:comments},function(data) {
                             console.log(data);
                             feedbackresult(data);
