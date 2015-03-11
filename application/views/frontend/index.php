@@ -170,7 +170,7 @@
                         <input class="fname userfirstname" required type="text" placeholder="FIRST NAME *">
                         <input class="mname" type="text" required placeholder="MIDDLE NAME *">
                         <input class="lname" type="text" required placeholder="LAST NAME *">
-                        <p><sup>*</sup>INDICATES A REQUIRED FEILD.</p>
+                        <p><sup>*</sup>INDICATES A REQUIRED FIELD.</p>
                         <div class="left-btn text-center">
                         <!--<a class="fancy" href="#resp" rel="gallery"></a>-->
                         <button class="enter" id="enterr">ENTER</button>
@@ -190,7 +190,7 @@
                         <input class="organization" type="text" name="mname" placeholder="ORGANIZATION">
                         <input class="email" type="text" name="lname" placeholder="EMAIL ID">
                         <textarea class="comments" style="margin-top:10px;" rows="4" cols="50" placeholder="COMMENTS / FEEDBACK"></textarea>
-                        <p><sup>*</sup>INDICATES A REQUIRED FEILD.</p>
+                        <p><sup>*</sup>INDICATES A REQUIRED FIELD.</p>
                         <div class="left-btns text-center">
                         <a class="fancybox1" href="#resp" rel="gallery"></a>
                         <button type="button"  class="feedbacksend">SUBMIT</button>
