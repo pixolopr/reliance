@@ -206,6 +206,7 @@
                         <script>
                             $(document).ready(function () {
                                 $(".set-form").hide();
+                                $(".thn").hide();
                                 $("#enterr").click(function() {
                                     var firstname=$(".firstform .fname").val();
                                     var middlename=$(".firstform .mname").val();
@@ -214,19 +215,25 @@
                                     {
                                         $(".userfirstname2").text(firstname);
                                         $(".set-form").show();
-                                        $(".firstform .fname").val() = '';
-                                        $(".firstform .mname").val() = '';
-                                        $(".firstform .lname").val() = '';
+                                        $(".firstform .fname").val('');
+                                        $(".firstform .mname").val('');
+                                        $(".firstform .lname").val('');
                                     };
                                     
                                 });
                                 $(".ss-img").click(function() {
                                     $(".set-form").hide();
+                                    $(".thn").hide();
                                 });
                                 
                                 $(".feedbacksend").click(function() {
-                                    $(".set-form").hide();
-                                    $( ".fancybox1" ).trigger( "click" );
+                                    //$(".set-form").hide();
+                                    $(".thn").show();
+                                    $(".designation").val('');
+                                    $(".organization").val('');
+                                    $(".email").val('');
+                                    $(".feedback").val('');
+                                    //$( ".fancybox1" ).trigger( "click" );
                                 });
         });
                     </script>
