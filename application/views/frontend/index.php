@@ -166,17 +166,17 @@
                         </select>
                         
                         <br>
-                        <div class="firstform"><!--action="#"-->
-                        <input class="fname userfirstname" required type="text" name="fname" placeholder="FIRST NAME *">
-                        <input class="mname" type="text" required name="mname" placeholder="MIDDLE NAME *">
-                        <input class="lname" type="text" required name="lname" placeholder="LAST NAME *">
+                        <form class="firstform" action="#" method="POST"  >
+                        <input class="fname userfirstname" required type="text" placeholder="FIRST NAME *">
+                        <input class="mname" type="text" required placeholder="MIDDLE NAME *">
+                        <input class="lname" type="text" required placeholder="LAST NAME *">
                         <p><sup>*</sup>INDICATES A REQUIRED FEILD.</p>
                         <div class="left-btn text-center">
                         <!--<a class="fancy" href="#resp" rel="gallery"></a>-->
-                        <button type="submit" class="enter" id="enterr">ENTER</button>
+                        <button class="enter" id="enterr">ENTER</button>
                             <!--</form>--></div>
 <!--                            <div id="response"></div>-->
-                        </div>
+                        </form>
                         <div style="display: none;color: #4D4D4D;padding: 15px;text-align: center;background: rgb(253, 253, 253);font-family: open sans;" id="resp">Your feedback is appreciated</div>
                         
                         <div class="set-form" >
@@ -205,20 +205,35 @@
                         </div>
                         <script>
                             $(document).ready(function () {
+                                    firstname= '';
+                                        middlename='';
+                                        lastname='';
+                                
                                 $(".set-form").hide();
                                 $(".thn").hide();
-                                $("#enterr").click(function() {
-                                    var firstname=$(".firstform .fname").val();
-                                    var middlename=$(".firstform .mname").val();
-                                    var lastname=$(".firstform .lname").val();
-                                    if(firstname!='' && middlename!='' && lastname!='')
-                                    {
+                                
+                                var showresult = function()
+                                {
+                                    
                                         $(".userfirstname2").text(firstname);
                                         $(".set-form").show();
-                                        $(".firstform .fname").val('');
-                                        $(".firstform .mname").val('');
-                                        $(".firstform .lname").val('');
+                                };
+                                
+                                $("#enterr").click(function() {
+                                    firstname=$(".fname").val();
+                                    middlename=$(".mname").val();
+                                    lastname=$(".lname").val();
+                                    if(firstname!='' && middlename!='' && lastname!='')
+                                    {
+                                        
+                                        $.getJSON("<?php echo site_url("website/sendfeedback"); ?>",{salut:salutation, fname:firstname, mname:middlename, lname:lastname},function(data) {
+                            console.log(data);
+                            showresult(data);
+                                           
+                        });   
+                                        return false;
                                     };
+                                     
                                     
                                 });
                                 $(".ss-img").click(function() {
@@ -233,6 +248,10 @@
                                     $(".organization").val('');
                                     $(".email").val('');
                                     $(".feedback").val('');
+                                    
+                                        $(".firstform .fname").val('');
+                                        $(".firstform .mname").val('');
+                                        $(".firstform .lname").val('');
                                     //$( ".fancybox1" ).trigger( "click" );
                                 });
         });
@@ -247,7 +266,7 @@
             //var location = location.protocol+'//'+location.host+'/reliance/uploads/';
             $(document).ready(function() {
                 
-                function showresult(data) {
+                /*function showresult(data) {
                     //var location = ''+location.protocol+'//'+location.host+'/reliance/uploads/';
 //                    $("#response").html('<p style="color: rgb(9, 9, 9);font-weight: bolder;background: white;padding: 6px 6px 12px 13px;text-align: center;font-family: open sans;border-radius: 4px;">Your feedback is appreciated</p>');
                     //$( ".fancybox1" ).trigger( "click" );
@@ -262,7 +281,7 @@
                             console.log(data);
                             showresult(data);
                         });   
-                };
+                };*/
 //                $(".enter").click(function () {
 //                    console.log("clicked");
 //                    salutation = $(".salut").val();

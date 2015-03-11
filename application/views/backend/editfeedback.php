@@ -48,6 +48,24 @@ feedback Details
 </div>
 </div>
 <div class="form-group">
+<label class="col-sm-2 control-label" for="normal-field">Designation</label>
+<div class="col-sm-4">
+<input type="text" id="normal-field" class="form-control" name="designation" value='<?php echo set_value('designation',$before->designation);?>'>
+</div>
+</div>
+<div class="form-group">
+<label class="col-sm-2 control-label" for="normal-field">Organisation</label>
+<div class="col-sm-4">
+<input type="text" id="normal-field" class="form-control" name="organisation" value='<?php echo set_value('organisation',$before->organisation);?>'>
+</div>
+</div>
+<div class="form-group">
+<label class="col-sm-2 control-label" for="normal-field">Comments</label>
+<div class="col-sm-4">
+<input type="text" id="normal-field" class="form-control" name="comments" value='<?php echo set_value('comments',$before->comments);?>'>
+</div>
+</div>
+<div class="form-group">
 <label class="col-sm-2 control-label" for="normal-field">&nbsp;</label>
 <div class="col-sm-4">
 <button type="submit" class="btn btn-primary">Save</button>

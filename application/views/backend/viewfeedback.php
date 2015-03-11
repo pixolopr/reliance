@@ -21,7 +21,11 @@ feedback Details
 <th data-field="lastname">lastname</th>
 <th data-field="middlename">middlename</th>
 <th data-field="email">email</th>
-<th data-field="contact">contact</th>
+<th data-field="contactNo">contactNo</th>
+<th data-field="designation">designation</th>
+<th data-field="organistion">organistion</th>
+<th data-field="comments">comments</th>
+<th data-field="Action">Action</th>
 </tr>
 </thead>
 <tbody>
@@ -32,7 +36,7 @@ feedback Details
 </section>
 <script>
 function drawtable(resultrow) {
-return "<tr><td>" + resultrow.id + "</td><td>" + resultrow.timestamp + "</td><td>" + resultrow.salutation + "</td><td>" + resultrow.firstname + "</td><td>" + resultrow.lastname + "</td><td>" + resultrow.middlename + "</td><td>" + resultrow.email + "</td><td>" + resultrow.contact + "</td><td><a class='btn btn-primary btn-xs' href='<?php echo site_url('site/editfeedback?id=');?>"+resultrow.id+"'><i class='icon-pencil'></i></a><a class='btn btn-danger btn-xs' href='<?php echo site_url('site/deletefeedback?id='); ?>"+resultrow.id+"'><i class='icon-trash '></i></a></td></tr>";
+return "<tr><td>" + resultrow.id + "</td><td>" + resultrow.timestamp + "</td><td>" + resultrow.salutation + "</td><td>" + resultrow.firstname + "</td><td>" + resultrow.lastname + "</td><td>" + resultrow.middlename + "</td><td>" + resultrow.email + "</td><td>" + resultrow.contact + "</td><td>"+resultrow.designation+"</td><td>"+ resultrow.organisation +"</td><td>"+resultrow.comments +"</td><td><a class='btn btn-primary btn-xs' href='<?php echo site_url('site/editfeedback?id=');?>"+resultrow.id+"'><i class='icon-pencil'></i></a><a class='btn btn-danger btn-xs' href='<?php echo site_url('site/deletefeedback?id='); ?>"+resultrow.id+"'><i class='icon-trash '></i></a></td></tr>";
 }
 generatejquery("<?php echo $base_url;?>");
 </script>

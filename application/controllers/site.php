@@ -1462,6 +1462,21 @@ $elements[7]->field="`reliance_feedback`.`contact`";
 $elements[7]->sort="1";
 $elements[7]->header="contact";
 $elements[7]->alias="contact";
+$elements[8]=new stdClass();
+$elements[8]->field="`reliance_feedback`.`designation`";
+$elements[8]->sort="1";
+$elements[8]->header="designation";
+$elements[8]->alias="designation";
+$elements[9]=new stdClass();
+$elements[9]->field="`reliance_feedback`.`organisation`";
+$elements[9]->sort="1";
+$elements[9]->header="organisation";
+$elements[9]->alias="organisation";
+$elements[10]=new stdClass();
+$elements[10]->field="`reliance_feedback`.`comments`";
+$elements[10]->sort="1";
+$elements[10]->header="comments";
+$elements[10]->alias="comments";
 $search=$this->input->get_post("search");
 $pageno=$this->input->get_post("pageno");
 $orderby=$this->input->get_post("orderby");
@@ -1516,7 +1531,10 @@ $lastname=$this->input->get_post("lastname");
 $middlename=$this->input->get_post("middlename");
 $email=$this->input->get_post("email");
 $contact=$this->input->get_post("contact");
-if($this->feedback_model->create($salutation,$firstname,$lastname,$middlename,$email,$contact)==0)
+$designation=$this->input->get_post("designation");
+$organisation=$this->input->get_post("organisation");
+$comments=$this->input->get_post("comments");
+if($this->feedback_model->create($salutation,$firstname,$lastname,$middlename,$email,$contact,$designation,$organisation,$comments)==0)
 $data["alerterror"]="New feedback could not be created.";
 else
 $data["alertsuccess"]="feedback created Successfully.";
@@ -1564,7 +1582,11 @@ $lastname=$this->input->get_post("lastname");
 $middlename=$this->input->get_post("middlename");
 $email=$this->input->get_post("email");
 $contact=$this->input->get_post("contact");
-if($this->feedback_model->edit($id,$salutation,$firstname,$lastname,$middlename,$email,$contact)==0)
+$designation=$this->input->get_post("designation");
+$organisation=$this->input->get_post("organisation");
+$comments=$this->input->get_post("comments");
+    
+if($this->feedback_model->edit($id,$salutation,$firstname,$lastname,$middlename,$email,$contact,$designation,$organisation,$comments)==0)
 $data["alerterror"]="New feedback could not be Updated.";
 else
 $data["alertsuccess"]="feedback Updated Successfully.";

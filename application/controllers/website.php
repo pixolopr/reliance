@@ -19,6 +19,19 @@ class Website extends CI_Controller
         $mname = $this->input->get_post("mname");
         $lname = $this->input->get_post("lname");
         $data['message']=$this->feedback_model->sendfb($salut,$fname,$mname,$lname);
+        
+        //$data['message']=$this->photos_model->getphotosbyfilter($albumid);
+        $this->load->view( 'json', $data );	
+    }
+    public function sendfeedbackdetails()
+    {
+        $designation = $this->input->get_post("designation");
+        $organization = $this->input->get_post("organization");
+        $email = $this->input->get_post("email");
+        $feedback = $this->input->get_post("feedback");
+        $data['message']=$this->feedback_model->sendfbd($designation,$organization,$email,$feedback);
+        
+        //'INSERT INTO '
         //$data['message']=$this->photos_model->getphotosbyfilter($albumid);
         $this->load->view( 'json', $data );	
     }
