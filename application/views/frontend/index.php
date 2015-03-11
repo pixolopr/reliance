@@ -166,15 +166,15 @@
                         </select>
                         
                         <br>
-                        <form action="#" class="firstform">
+                        <div class="firstform"><!--action="#"-->
                         <input class="fname userfirstname" required type="text" name="fname" placeholder="FIRST NAME *">
                         <input class="mname" type="text" required name="mname" placeholder="MIDDLE NAME *">
                         <input class="lname" type="text" required name="lname" placeholder="LAST NAME *">
                         <p><sup>*</sup>INDICATES A REQUIRED FEILD.</p>
                         <div class="left-btn text-center">
-                        <a class="" href="#resp" rel="gallery"></a>
+                        <!--<a class="fancy" href="#resp" rel="gallery"></a>-->
                         <button type="submit" class="enter" id="enterr">ENTER</button>
-                        </form>
+                            <!--</form>--></div>
 <!--                            <div id="response"></div>-->
                         </div>
                         <div style="display: none;color: #4D4D4D;padding: 15px;text-align: center;background: rgb(253, 253, 253);font-family: open sans;" id="resp">Your feedback is appreciated</div>
@@ -186,15 +186,16 @@
                                     <h4>we look forward to your feedback..</h4> 
 
                         
-                        <input class="fname" type="text" name="fname" placeholder="DESIGNATION" >
-                        <input class="mname" type="text" name="mname" placeholder="ORGANIZATION">
-                        <input class="lname" type="text" name="lname" placeholder="EMAIL ID">
-                        <textarea style="margin-top:10px;" rows="4" cols="50" placeholder="COMMENTS / FEEDBACK"></textarea>
+                        <input class="designation" type="text" name="fname" placeholder="DESIGNATION" >
+                        <input class="organization" type="text" name="mname" placeholder="ORGANIZATION">
+                        <input class="email" type="text" name="lname" placeholder="EMAIL ID">
+                        <textarea class="feedback" style="margin-top:10px;" rows="4" cols="50" placeholder="COMMENTS / FEEDBACK"></textarea>
                         <p><sup>*</sup>INDICATES A REQUIRED FEILD.</p>
                         <div class="left-btns text-center">
-                        
-                        <button type="button"  class="enter">SUBMIT</button>
-<!--                            <div id="response"></div>-->
+                        <a class="fancybox1" href="#resp" rel="gallery"></a>
+                        <button type="button"  class="feedbacksend">SUBMIT</button>
+                            
+<!--<div id="response"></div>-->
                         </div>
                             </div>
                         </div>
@@ -209,11 +210,19 @@
                                     {
                                         $(".userfirstname2").text(firstname);
                                         $(".set-form").show();
-                                    }
+                                        $(".firstform .fname").val() = '';
+                                        $(".firstform .mname").val() = '';
+                                        $(".firstform .lname").val() = '';
+                                    };
                                     
                                 });
-                                 $(".ss-img").click(function() {
-                                $(".set-form").hide();
+                                $(".ss-img").click(function() {
+                                    $(".set-form").hide();
+                                });
+                                
+                                $(".feedbacksend").click(function() {
+                                    $(".set-form").hide();
+                                    $( ".fancybox1" ).trigger( "click" );
                                 });
         });
                     </script>
@@ -230,7 +239,7 @@
                 function showresult(data) {
                     //var location = ''+location.protocol+'//'+location.host+'/reliance/uploads/';
 //                    $("#response").html('<p style="color: rgb(9, 9, 9);font-weight: bolder;background: white;padding: 6px 6px 12px 13px;text-align: center;font-family: open sans;border-radius: 4px;">Your feedback is appreciated</p>');
-                    $( ".fancybox1" ).trigger( "click" );
+                    //$( ".fancybox1" ).trigger( "click" );
                     
                 };
                 
