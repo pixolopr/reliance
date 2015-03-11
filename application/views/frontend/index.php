@@ -197,7 +197,11 @@
                             
 <!--<div id="response"></div>-->
                         </div>
+                            <div class="thn">
+                                <h2>Your feedback is appreciated</h2>
                             </div>
+                            </div>
+                           
                         </div>
                         <script>
                             $(document).ready(function () {
