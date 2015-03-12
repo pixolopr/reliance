@@ -302,7 +302,7 @@ padding-bottom: 10px;">
             return false;
 
    return false;
-}
+}`  
           if(  msieversion() )
            {
                $(".carousel-control").css("background-image","none");
