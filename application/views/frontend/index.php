@@ -417,9 +417,9 @@ float: none;">
                                 <div class="events-img text-center">
                                     <img src="<?php echo base_url("frontend")."/" ?>images/award.png" class="img-responsive" usemap="#map">
                                     <map name="map">
-  <area shape="circle" coords="32,150,100"  href="#video1">
-  <area shape="circle" coords="80,30,99,93"  href="#video2">
-  <area shape="circle" coords="226,102,192,167"  href="#video3">
+  <area shape="circle" coords="32,150,100"  class="vidmap" href="#video1">
+  <area shape="circle" coords="80,30,99,93" class="vidmap" href="#video2">
+  <area shape="circle" coords="226,102,192,167" class="vidmap" href="#video3">
 </map>
                                     <a href="<?php echo site_url("website/videogallery"); ?>">
                                         <button type="submit">CLICK HERE</button>
@@ -430,9 +430,10 @@ float: none;">
                                 <div class="vid-right">
                                     
 <!--                                        <source src="https://www.youtube.com/watch?v=PuvZx5PUP10" type="video/mp4">-->
-<iframe width="100%" height="170" src="https://www.youtube.com/embed/92qda5IDhiY" frameborder="0" allowfullscreen></iframe>
-<iframe width="100%" height="170" src="https://www.youtube.com/watch?v=ilc0bOV8O2I" frameborder="0" allowfullscreen style="display:none;"></iframe>
-<iframe width="100%" height="170" src="https://www.youtube.com/watch?v=ugoZ476PsVM" frameborder="0" allowfullscreen style="display:none;"></iframe>
+<iframe width="100%" class="vid1" height="170" src="https://www.youtube.com/embed/92qda5IDhiY" frameborder="0" allowfullscreen ></iframe>
+<iframe width="100%" class="vid1 vid" height="170" src="https://www.youtube.com/embed/92qda5IDhiY" frameborder="0" allowfullscreen style="display:none;"></iframe>
+<iframe width="100%" class="vid1 vid"  height="170" src="https://www.youtube.com/watch?v=ilc0bOV8O2I" frameborder="0" allowfullscreen style="display:none;"></iframe>
+<iframe width="100%" class="vid1 vid"  height="170" src="https://www.youtube.com/watch?v=ugoZ476PsVM" frameborder="0" allowfullscreen style="display:none;"></iframe>
 
                                 </div>
                             </div>
@@ -451,30 +452,30 @@ float: none;">
      <script>
     $(document).ready(function () {
 
-        $(".cssMenu").hide();
+        $(".vid").hide();
             
-        $(".section1").click(function () {
-            $(".menu").removeClass("active");
+        $("#video1").click(function () {
+            $(".vidmap").removeClass("active");
             $(this).addClass("active");
-            $(".cssMenu").hide();
-            $(".cssMenu1").show(300);
+            $(".vid").hide();
+            $(".vid1").show(300);
             
         });
-        $(".section2").click(function () {
-             $(".menu").removeClass("active");
+        $("#video2").click(function () {
+             $(".vidmap").removeClass("active");
             $(this).addClass("active");
-            $(".cssMenu").hide();
-            $(".cssMenu2").show(300);
+            $(".vid").hide();
+            $(".vid2").show(300);
             
         });
-        $(".section3").click(function () {
-             $(".menu").removeClass("active");
+        $("#video3").click(function () {
+             $(".vidmap").removeClass("active");
             $(this).addClass("active");
-            $(".cssMenu").hide();
-            $(".cssMenu3").show(300);
+            $(".vid").hide();
+            $(".vid3").show(300);
             
         });
-        $(".mybackground").get(0).loop = true;
+//        $(".mybackground").get(0).loop = true;
         //$(".mybackground").get(0).autoplay=true;
 
     });
