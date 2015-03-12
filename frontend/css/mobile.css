@@ -31,7 +31,7 @@
         text-align: center;
         color: #949597;
         width: 100%;
-        background: rgb(204, 205, 206) url(../images/arow.png) no-repeat;
+        /* background: rgb(204, 205, 206) url(../images/arow.png) no-repeat; */
         -webkit-appearance: none;
         -moz-appearance: none;
         background-position: 220px 8px;
@@ -239,6 +239,17 @@ margin: auto;
 padding-top: 0px !important;
 width: 100%;
 }
+    body {
+background: -webkit-linear-gradient(#bec0c2, #e1e0e0);
+background: -o-linear-gradient(#bec0c2, #e1e0e0);
+background: -moz-linear-gradient(#bec0c2, #e1e0e0);
+background: -webkit-gradient(linear, left top, left bottom, from(#bec0c2), to(#e1e0e0));
+background: linear-gradient(#bec0c2, #e1e0e0);
+filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#bec0c2', endColorstr='#e1e0e0', GradientType=0);
+padding-top: 15px;
+/* background-image: url('http://i.imgur.com/DLAzBlZ.jpg'); */
+background-repeat: repeat-x;
+}
 }
 
 @media only screen and (min-width: 469px)and (max-width: 949px) {
@@ -279,7 +290,9 @@ margin: auto;
     }
     .home-soci {
         text-align: center !important;
-    }
+    
+        float: none;
+}
     .dg-container nav {
         width: 100%;
         position: absolute;
@@ -289,14 +302,14 @@ margin: auto;
         top: 78%;
     }
     .events-img.text-center button {
-        top: 140px;
+        bottom: 46px;
         z-index: 9999999;
     }
     .events-img.text-center img {
-        margin: -7px auto;
+        margin: 0px auto;
     }
     .events-img.text-center {
-        height: 177px;
+        height: auto;
     }
     .midd-img {
         padding: 12px;
@@ -405,7 +418,7 @@ margin: auto;
         width: 100%;
     }
     .left-form select {
-        background-position: 232px 6px;
+        background-position: 232px 0px;
     }
     .amazingslider-nav-featuredarrow-1 {
         top: 337px !important;
@@ -418,6 +431,26 @@ background: #f2f0ee;
    height: auto !important;
 width: 100%;
 margin: auto;
+}
+    .pp {
+text-align: center;
+float: none;
+line-height: 0;
+padding-left: 0px !important;
+}
+    .ap {
+text-align: center;
+}
+    body {
+background: -webkit-linear-gradient(#bec0c2, #e1e0e0);
+background: -o-linear-gradient(#bec0c2, #e1e0e0);
+background: -moz-linear-gradient(#bec0c2, #e1e0e0);
+background: -webkit-gradient(linear, left top, left bottom, from(#bec0c2), to(#e1e0e0));
+background: linear-gradient(#bec0c2, #e1e0e0);
+filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#bec0c2', endColorstr='#e1e0e0', GradientType=0);
+padding-top: 15px;
+/* background-image: url('http://i.imgur.com/DLAzBlZ.jpg'); */
+background-repeat: repeat-x;
 }
 }
 

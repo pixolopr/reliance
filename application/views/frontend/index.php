@@ -398,10 +398,9 @@
                                     </div>
                                     <div class="col-md-8">
                                        
-                                        <p>
+                                        <p class="ap">
                                             See what the leaders from the CDIT industry have to say.</p>
-                                            <p style="padding-left:20%;
-float: none;">
+                                            <p class="pp">
                                              Views from those who matter. 
 
                                       </p>
@@ -416,11 +415,13 @@ float: none;">
                             <div class="col-md-6">
                                 <div class="events-img text-center">
                                     <img src="<?php echo base_url("frontend")."/" ?>images/award.png" class="img-responsive" usemap="#map">
+<!--
                                     <map name="map">
   <area shape="circle" coords="32,150,100"  class="vidmap" href="#video1">
   <area shape="circle" coords="80,30,99,93" class="vidmap" href="#video2">
   <area shape="circle" coords="226,102,192,167" class="vidmap" href="#video3">
 </map>
+-->
                                     <a href="<?php echo site_url("website/videogallery"); ?>">
                                         <button type="submit">CLICK HERE</button>
                                     </a>
@@ -430,10 +431,7 @@ float: none;">
                                 <div class="vid-right">
                                     
 <!--                                        <source src="https://www.youtube.com/watch?v=PuvZx5PUP10" type="video/mp4">-->
-<iframe width="100%" class="vid1" height="170" src="https://www.youtube.com/embed/92qda5IDhiY" frameborder="0" allowfullscreen ></iframe>
-<iframe width="100%" class="vid1 vid" height="170" src="https://www.youtube.com/embed/92qda5IDhiY" frameborder="0" allowfullscreen style="display:none;"></iframe>
-<iframe width="100%" class="vid1 vid"  height="170" src="https://www.youtube.com/watch?v=ilc0bOV8O2I" frameborder="0" allowfullscreen style="display:none;"></iframe>
-<iframe width="100%" class="vid1 vid"  height="170" src="https://www.youtube.com/watch?v=ugoZ476PsVM" frameborder="0" allowfullscreen style="display:none;"></iframe>
+<iframe width="100%" class="vid1" height="170" src="https://www.youtube.com/embed/PuvZx5PUP10" frameborder="0" allowfullscreen ></iframe>
 
                                 </div>
                             </div>
@@ -449,37 +447,6 @@ float: none;">
     <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.gallery.js"></script>
     <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.slicknav.js"></script>
      
-     <script>
-    $(document).ready(function () {
-
-        $(".vid").hide();
-            
-        $("#video1").click(function () {
-            $(".vidmap").removeClass("active");
-            $(this).addClass("active");
-            $(".vid").hide();
-            $(".vid1").show(300);
-            
-        });
-        $("#video2").click(function () {
-             $(".vidmap").removeClass("active");
-            $(this).addClass("active");
-            $(".vid").hide();
-            $(".vid2").show(300);
-            
-        });
-        $("#video3").click(function () {
-             $(".vidmap").removeClass("active");
-            $(this).addClass("active");
-            $(".vid").hide();
-            $(".vid3").show(300);
-            
-        });
-//        $(".mybackground").get(0).loop = true;
-        //$(".mybackground").get(0).autoplay=true;
-
-    });
-</script>
      
       <script>
     $(".fancybox1").fancybox({

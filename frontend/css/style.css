@@ -1172,3 +1172,8 @@ background: #f2f0ee;
     position: absolute !important;
     top: 0px !important;
 }
+.pp{
+padding-left:20%;
+float: none;
+line-height: 0;
+}
