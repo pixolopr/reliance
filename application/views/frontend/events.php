@@ -286,14 +286,34 @@ padding-bottom: 10px;">
        <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.slicknav.js"></script>
        
            <script>
+                            function msieversion() {
+
+        var ua = window.navigator.userAgent;
+        var msie = ua.indexOf("MSIE ");
+
+        if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))      // If Internet Explorer, return version number
+            return true;
+        else                 // If another browser, return 0
+            return false;
+
+   return false;
+}
+          if(  msieversion() )
+           {
+               $(".carousel-control.right").css("background","transparent");
+               $(".left-form select").css("background","#888888");
+               $(".left-form").css("content","none");
+               $(".left-form input[type=text]").css("background","#888888");
+               
+           }
+               
+               
         $(document).ready(function () {
-                    $(".fancybox").fancybox({
-                       
-                    
-                        openEffect: 'elastic',
-                        closeEffect: 'elastic',
-                  
-                    });
+              $(".fancybox").fancybox({
+   openEffect  : "fade",
+   closeEffect : "fade",
+   type : "image"
+});
         });
     </script>
         <script type="text/javascript">
