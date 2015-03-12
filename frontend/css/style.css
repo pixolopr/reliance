@@ -472,6 +472,9 @@ only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
 .left-form select::-ms-expand {
     display: none;
 }
+.pic-set select::-ms-expand {
+    display: none;
+}
 .left-form {
     padding-top: 10px;
     font-size: 14px;
@@ -607,6 +610,9 @@ only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
     /* background: rgb(204, 205, 206) url(../images/arow.png) no-repeat; */
     -webkit-appearance: none;
     -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    -linear-appearance: none;
     text-indent: 0.01px;
     -o-text-overflow: "";
     text-overflow: "";
