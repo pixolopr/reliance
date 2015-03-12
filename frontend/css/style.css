@@ -685,6 +685,7 @@ img.eve-img {
     margin: 0px auto 30px;
     height: auto;
     width: 100%;
+    max-width: 162px;
 }
 .mid-event p {
     text-transform: uppercase;

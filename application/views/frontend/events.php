@@ -305,10 +305,8 @@ padding-bottom: 10px;">
 }
           if(  msieversion() )
            {
-               $(".carousel-control").css("background-image","transparent");
-               $(".left-form select").css("background","#888888");
-               $(".left-form").css("content","none");
-               $(".left-form input[type=text]").css("background","#888888");
+               $(".carousel-control").css("background-image","none");
+             
                
            }
                
