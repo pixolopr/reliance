@@ -9,10 +9,13 @@
     <title>Reliance Digital Forum | Home</title>
     <link rel="shortcut icon" href="">
    
-      <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js" type="text/javascript"></script>
     <![endif]-->
+    <!--[if IE 9]>
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url("frontend")."/" ?>css/ie9.css" />
+<![endif]-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
@@ -142,7 +145,7 @@
                                         <div class="col-md-6">
                                            <div class="dis-set">
                                                <h6>MAKING TECHNOLOGY ACCESSIBLE TO EVERY INDIAN</h6>
-                                               <p>We started with just one store, and today are 1000 stores strong with a presence across more than 130 cities. We are by far the largest CDIT retailer in India. We now service more than 30 million customers per year with resQ installations exceeding one million per year. I can assure you that no CDIT retailer in the world has ever grown so fast and dominated a market so completely in such a short time. </p>
+                                               <p>We started with just one store, and today are 1000 stores strong with a presence across more than 130 cities. We are by far the largest CDIT retailer in India. We now service more than 30 million customers per year with resQ installations exceeding one million per year. </p>
                                                <p>In the spirit of our founder, our exuberance to break new boundaries is inexhaustible. A new era awaits us where we can create a truly digital India that stands out from the rest of the world where we will personalize technology and become the trusted expert that every Indian needs to bring technology to their life.</p>
                                                <h6>Brian Bade, CEO, Reliance Digital</h6>
                                            </div>
@@ -156,7 +159,7 @@
             </div>
             <div class="col-md-3">
                 <div class="mid-right">
-                    <h3>share a feedback</h3>
+                    <h3>share your feedback</h3>
                     <div class="left-form">
                         <select class="clas salut salutation">
                            <?php foreach($salutations as $salut) { ?>
@@ -168,7 +171,7 @@
                         <br>
                         <form class="firstform" action="#" method="POST"  >
                         <input class="fname userfirstname" required type="text" placeholder="FIRST NAME *">
-                        <input class="mname" type="text" required placeholder="MIDDLE NAME *">
+                        <input class="mname" type="text" required placeholder="MIDDLE NAME">
                         <input class="lname" type="text" required placeholder="LAST NAME *">
                         <p><sup>*</sup>INDICATES A REQUIRED FIELD.</p>
                         <div class="left-btn text-center">
@@ -384,7 +387,7 @@
                     </section>
                 </div>
             </div>
-          <div class="col-md-6" style="background: #f2f0ee;height: 324px;">
+          <div class="col-md-6 mob"
                 <div class="vid-slid">
                     <div class="img-slid">
                         <div class="row">
@@ -412,7 +415,12 @@ float: none;">
 
                             <div class="col-md-6">
                                 <div class="events-img text-center">
-                                    <img src="<?php echo base_url("frontend")."/" ?>images/award.png" class="img-responsive">
+                                    <img src="<?php echo base_url("frontend")."/" ?>images/award.png" class="img-responsive" usemap="#map">
+                                    <map name="map">
+  <area shape="circle" coords="32,150,100"  href="#video1">
+  <area shape="circle" coords="80,30,99,93"  href="#video2">
+  <area shape="circle" coords="226,102,192,167"  href="#video3">
+</map>
                                     <a href="<?php echo site_url("website/videogallery"); ?>">
                                         <button type="submit">CLICK HERE</button>
                                     </a>
@@ -422,7 +430,9 @@ float: none;">
                                 <div class="vid-right">
                                     
 <!--                                        <source src="https://www.youtube.com/watch?v=PuvZx5PUP10" type="video/mp4">-->
-<iframe width="100%" height="170" src="https://www.youtube.com/embed/PuvZx5PUP10" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="170" src="https://www.youtube.com/embed/92qda5IDhiY" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="170" src="https://www.youtube.com/watch?v=ilc0bOV8O2I" frameborder="0" allowfullscreen style="display:none;"></iframe>
+<iframe width="100%" height="170" src="https://www.youtube.com/watch?v=ugoZ476PsVM" frameborder="0" allowfullscreen style="display:none;"></iframe>
 
                                 </div>
                             </div>
@@ -437,6 +447,39 @@ float: none;">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.gallery.js"></script>
     <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.slicknav.js"></script>
+     
+     <script>
+    $(document).ready(function () {
+
+        $(".cssMenu").hide();
+            
+        $(".section1").click(function () {
+            $(".menu").removeClass("active");
+            $(this).addClass("active");
+            $(".cssMenu").hide();
+            $(".cssMenu1").show(300);
+            
+        });
+        $(".section2").click(function () {
+             $(".menu").removeClass("active");
+            $(this).addClass("active");
+            $(".cssMenu").hide();
+            $(".cssMenu2").show(300);
+            
+        });
+        $(".section3").click(function () {
+             $(".menu").removeClass("active");
+            $(this).addClass("active");
+            $(".cssMenu").hide();
+            $(".cssMenu3").show(300);
+            
+        });
+        $(".mybackground").get(0).loop = true;
+        //$(".mybackground").get(0).autoplay=true;
+
+    });
+</script>
+     
       <script>
     $(".fancybox1").fancybox({
         width	: 300,
@@ -476,6 +519,10 @@ float: none;">
            if(  msieversion() )
            {
                $(".dis-set p").css("font-size","10px");
+               $(".left-form select").css("background","#888888");
+               $(".left-form").css("content","none");
+               $(".left-form input[type=text]").css("background","#888888");
+               
            }
             
             

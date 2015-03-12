@@ -1,0 +1,25 @@
+.left-form:after {
+display:none;
+}
+.left-form select {
+
+appearance: none;
+
+}
+.carousel-control .right {
+
+background: transparent !important;
+-webkit-background: transparent !important;
+-o-background: transparent !important;
+-moz-background: transparent !important;
+-linear-background: transparent !important;
+}
+/*
+.carousel-control.left {
+background-image: -webkit-linear-gradient(none);
+background-image: -o-linear-gradient(none);
+background-image: -webkit-gradient(none);
+background-image: linear-gradient(none);
+filter: progid:DXImageTransform.Microsoft.gradient(none);
+background-repeat:none;
+}*/

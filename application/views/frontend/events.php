@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/mobile.css">
 <!--    <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/flexslider.css">-->
     <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/jquery.bxslider.css">
+         <link href="<?php echo base_url("frontend")."/" ?>fancy/jquery.fancybox.css" rel="stylesheet" type="text/css">
     
 
     <link type='text/css' rel='stylesheet' href='<?php echo base_url("frontend")."/" ?>css/liquidcarousel.css' />
@@ -30,6 +31,9 @@
     <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/bootstrap-theme.min.css">
 -->
     <script src="<?php echo base_url("frontend")."/" ?>js/jquery-2.1.3.min.js"></script>
+        <script src="<?php echo base_url("frontend")."/" ?>fancy/jquery.fancybox.pack.js"></script>
+    <script src="<?php echo base_url("frontend")."/" ?>fancy/jquery.fancybox.js"></script>
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <!--    <script src="sliderengine/jquery.js"></script>-->
 <!--    <script src="sliderengine/amazingslider.js"></script>-->
@@ -39,6 +43,9 @@
     <script src="<?php echo base_url("frontend")."/" ?>js/jquery.bxslider.js"></script>
     <script src="<?php echo base_url("frontend")."/" ?>js/jquery.fitvids.js"></script>
     <script src="<?php echo base_url("frontend")."/" ?>js/jquery.liquidcarousel.js"></script>
+    
+    
+
     
        <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
         
@@ -210,7 +217,7 @@ padding-bottom: 10px;">
 	<div class="wrapper">
 		<ul>
 		<?php foreach($eventphotos as $eventphoto) { ?>
-			<li><a href="#" title="<?php echo $eventphoto->name; ?>"><img src="<?php echo base_url("uploads")."/".$eventphoto->image ?>" width="126" height="126" alt="<?php echo $eventphoto->name; ?>" border="0" /></a></li>
+			<li><a class="fancybox img-responsive" href="<?php echo base_url("uploads")."/".$photo->image; ?>" title="<?php echo $eventphoto->name; ?>"><img src="<?php echo base_url("uploads")."/".$eventphoto->image ?>" width="126" height="126" alt="<?php echo $eventphoto->name; ?>" border="0" /></a></li>
        <?php }; ?>
         </ul>
 	</div>
@@ -277,6 +284,18 @@ padding-bottom: 10px;">
 -->
                 <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.gallery.js"></script>
        <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.slicknav.js"></script>
+       
+           <script>
+        $(document).ready(function () {
+                    $(".fancybox").fancybox({
+                       
+                    
+                        openEffect: 'elastic',
+                        closeEffect: 'elastic',
+                  
+                    });
+        });
+    </script>
         <script type="text/javascript">
         $(document).ready(function () {
             $('#menu').slicknav();

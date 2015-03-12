@@ -21,6 +21,9 @@ body {
     background: linear-gradient(#bec0c2, #e1e0e0);
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#bec0c2', endColorstr='#e1e0e0', GradientType=0);
     padding-top: 15px;
+    background-image:url('http://i.imgur.com/DLAzBlZ.jpg');
+background-repeat:repeat-x;
+
 }
 h2 {
     color: #000000;
@@ -451,7 +454,7 @@ only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
     background: red;
     z-index: 5;
 }
-.left-form input[type=text],.left-form input[type=email] {
+.left-form input[type=text] {
     background: -webkit-gradient(linear, left top, left bottom, from(#888888), to(#636466));
     background: -webkit-linear-gradient(#888888, #636466);
     background: -moz-linear-gradient(#888888, #636466);
@@ -551,11 +554,11 @@ only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
     background: -webkit-gradient(linear, left top, left bottom, from(#FCFCFC), to(#BBBBBB));
     background: linear-gradient(#FCFCFC, #BBBBBB);
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#FCFCFC', endColorstr='#BBBBBB', GradientType=0);
-    bottom: 0;
+    bottom: 15px;
     color: #000;
 }
 .vid-right {
-    padding-top: 66px;
+    padding-top: 55px;
     width: 100%;
 }
 .events-img.text-center img {
@@ -563,7 +566,7 @@ only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
     position: relative;
     left: 13px;
     width: 100%;
-    top: 51px;
+    top: 28px;
 }
 .pic-head h2 {
     float: right;
@@ -741,6 +744,10 @@ img.eve-img {
     background-repeat: repeat-x;
     top: 50%;
     background-image: none !important;
+    -o-background-image: none !important;
+    -moz-background-image: none !important;
+    -linear-background-image: none !important;
+    -webkit-background-image: none !important;
 }
 .right-slic {
     padding-top: 15px;
@@ -1109,4 +1116,8 @@ a.left.carousel-control img {
 }
 .left-form input[type=textarea]:focus {
     background: rgb(77, 77, 77);
+}
+.mob{
+background: #f2f0ee;
+    height: 324px;
 }
