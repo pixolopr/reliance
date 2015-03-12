@@ -163,7 +163,7 @@ float: none;line-height:0">Views from those who matter.</p>
                 <div class="col-md-12">
                     <div class="col-md-6">
                         <div class="pic-select text-center">
-                            <h3>select an album</h3>
+                            <h3>select a video</h3>
                         </div>
                     </div>
                     <div class="col-md-6">
