@@ -829,7 +829,7 @@ a.left.carousel-control img {
 .slicknav_menu {
     display: none;
 }
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 70em) {
     .js #menu {
         display: none;
     }
