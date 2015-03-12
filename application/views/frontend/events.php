@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <title>Reliance Digital Forum  | Digital Events</title>
     <link rel="shortcut icon" href="">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/bootstrap.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/style.css">
     <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/slider.css">
@@ -73,6 +73,9 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+        <!--[if IE 9]>
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url("frontend")."/" ?>css/ie9.css" />
+<![endif]-->
     
 </head>
 
@@ -300,7 +303,7 @@ padding-bottom: 10px;">
 }
           if(  msieversion() )
            {
-               $(".carousel-control.right").css("background","transparent");
+               $(".carousel-control").css("background-image","transparent");
                $(".left-form select").css("background","#888888");
                $(".left-form").css("content","none");
                $(".left-form input[type=text]").css("background","#888888");

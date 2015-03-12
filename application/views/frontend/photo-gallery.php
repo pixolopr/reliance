@@ -8,6 +8,14 @@
     <meta name="author" content="">
     <title>Reliance Digital Forum  | Photo Gallery</title>
     <link rel="shortcut icon" href="">
+    
+        <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+        <!--[if IE 9]>
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url("frontend")."/" ?>css/ie9.css" />
+<![endif]-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/style.css">
@@ -44,13 +52,10 @@
 
     <!--    <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/modernizr.custom.53451.js"></script>-->
 
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+
 </head>
 
-<body>
+<body style="background-image:none;background:#BDBEC0;">
     
             <div class="mobile-menu hidden-md hidden-lg">
                 <ul id="menu">
@@ -250,6 +255,28 @@ float: none;line-height:0">captured & showcased under one roof!</p>
 		})(jQuery);
 	</script>
     <script>
+        
+                     function msieversion() {
+
+        var ua = window.navigator.userAgent;
+        var msie = ua.indexOf("MSIE ");
+
+        if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))      // If Internet Explorer, return version number
+            return true;
+        else                 // If another browser, return 0
+            return false;
+
+   return false;
+}
+         if(  msieversion() )
+           {
+               $(".dis-set p").css("font-size","10px");
+               $(".left-form select").css("background","#888888");
+               $(".pic-set").css("content","none");
+               $(".left-form input[type=text]").css("background","#888888");
+               
+           }
+            
         $(document).ready(function () {
                     $(".fancybox").fancybox({
                        

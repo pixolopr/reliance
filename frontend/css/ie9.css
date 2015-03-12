@@ -6,6 +6,16 @@ display:none;
 appearance: none;
 
 }
+.pic-set:after{
+
+display: none;
+
+}
+.pic-set select {
+
+appearance: none;
+
+}
 .carousel-control .right {
 
 background: transparent !important;
