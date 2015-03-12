@@ -557,7 +557,7 @@ only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
     background: -webkit-gradient(linear, left top, left bottom, from(#FCFCFC), to(#BBBBBB));
     background: linear-gradient(#FCFCFC, #BBBBBB);
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#FCFCFC', endColorstr='#BBBBBB', GradientType=0);
-    bottom: 15px;
+    bottom: 0px;
     color: #000;
 }
 .vid-right {
@@ -569,7 +569,7 @@ only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
     position: relative;
     left: 13px;
     width: 100%;
-    top: 28px;
+    top: 46px;
 }
 .pic-head h2 {
     float: right;

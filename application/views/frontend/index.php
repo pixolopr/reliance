@@ -16,6 +16,11 @@
     <!--[if IE 9]>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url("frontend")."/" ?>css/ie9.css" />
 <![endif]-->
+<!--
+      <script src="<?php echo base_url("frontend")."/" ?>js/modernizr.min.js"></script>
+    <script src="<?php echo base_url("frontend")."/" ?>js/css3-mediaqueries.js"></script>
+    <script src="<?php echo base_url("frontend")."/" ?>js/modernizr.custom.81085.js"></script>
+-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 

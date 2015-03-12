@@ -220,7 +220,7 @@ padding-bottom: 10px;">
 	<div class="wrapper">
 		<ul>
 		<?php foreach($eventphotos as $eventphoto) { ?>
-			<li><a class="fancybox img-responsive" href="<?php echo base_url("uploads")."/".$photo->image; ?>" title="<?php echo $eventphoto->name; ?>"><img src="<?php echo base_url("uploads")."/".$eventphoto->image ?>" width="126" height="126" alt="<?php echo $eventphoto->name; ?>" border="0" /></a></li>
+			<li><a class="fancybox img-responsive"  rel="gallery1" href="<?php echo base_url("uploads")."/".$eventphoto->image; ?>" title="<?php echo $eventphoto->name; ?>"><img src="<?php echo base_url("uploads")."/".$eventphoto->image ?>" width="126" height="126" alt="<?php echo $eventphoto->name; ?>" border="0" /></a></li>
        <?php }; ?>
         </ul>
 	</div>
@@ -313,9 +313,9 @@ padding-bottom: 10px;">
                
         $(document).ready(function () {
               $(".fancybox").fancybox({
-   openEffect  : "fade",
-   closeEffect : "fade",
-   type : "image"
+ openEffect	: 'none',
+		closeEffect	: 'none'
+ 
 });
         });
     </script>
