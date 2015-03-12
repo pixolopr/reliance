@@ -21,11 +21,17 @@
     <script src="<?php echo base_url("frontend")."/" ?>js/css3-mediaqueries.js"></script>
     <script src="<?php echo base_url("frontend")."/" ?>js/modernizr.custom.81085.js"></script>
 -->
+<!--
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+-->
+        <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/bootstrap-theme.min.css">
 
     <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/style.css">
+
     <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/slider.css">
+
      <link href="<?php echo base_url("frontend")."/" ?>fancy/jquery.fancybox.css" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/slicknav.css">
@@ -40,7 +46,7 @@
 <!--    <script src="<?php echo base_url("frontend")."/" ?>js/script.js"></script>-->
     <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/modernizr.custom.53451.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+<!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>-->
    
 </head>
 
@@ -71,7 +77,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="home-logo">
-                   <a href="<?php echo site_url("website/index"); ?>"> <img src="<?php echo base_url("frontend")."/" ?>images/logo.png" class="img-responsive"></a>
+                   <a href="<?php echo site_url("website/index"); ?>"> <img src="<?php echo base_url("frontend")."/" ?>images/logo.png" class=""></a>
                 </div>
             </div>
             <div class="col-md-6">

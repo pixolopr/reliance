@@ -9,7 +9,9 @@
     <title>Reliance Digital Forum  | Digital Events</title>
     <link rel="shortcut icon" href="">
     <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/bootstrap.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">-->
+ 
+    <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/style.css">
     <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/slider.css">
     <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/mobile.css">
@@ -51,7 +53,7 @@
         
       <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/slicknav.css">
       
-      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+<!--      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>-->
     
 
 

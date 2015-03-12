@@ -15,8 +15,13 @@
         <!--[if IE 9]>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url("frontend")."/" ?>css/ie9.css" />
 <![endif]-->
+<!--
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+-->
+          <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/bootstrap-theme.min.css">
+    
     <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/style.css">
     <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/slider.css">
     <link rel="stylesheet" href="<?php echo base_url("frontend")."/" ?>css/mobile.css">
