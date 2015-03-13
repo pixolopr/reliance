@@ -222,7 +222,7 @@ padding-bottom: 10px;">
 	<div class="wrapper">
 		<ul>
 		<?php foreach($eventphotos as $eventphoto) { ?>
-			<li><a class="fancybox img-responsive"  rel="gallery1" href="<?php echo base_url("uploads")."/".$eventphoto->image; ?>" title="<?php echo $eventphoto->name; ?>"><img src="<?php echo base_url("uploads")."/".$eventphoto->image ?>" width="126" height="126" alt="<?php echo $eventphoto->name; ?>" border="0" /></a></li>
+			<li><a class="fancybox img-responsive"  rel="gallery1" href="<?php echo base_url("uploads")."/".$eventphoto->image; ?>" ><img src="<?php echo base_url("uploads")."/".$eventphoto->image ?>" width="126" height="126" alt="<?php echo $eventphoto->name; ?>" border="0" /></a></li>
        <?php }; ?>
         </ul>
 	</div>
@@ -290,6 +290,7 @@ padding-bottom: 10px;">
                 <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.gallery.js"></script>
        <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.slicknav.js"></script>
        
+       
            <script>
                             function msieversion() {
 
@@ -302,11 +303,13 @@ padding-bottom: 10px;">
             return false;
 
    return false;
-}`  
+}
           if(  msieversion() )
            {
-               $(".carousel-control").css("background-image","none");
-             
+               $(".carousel-control").css("background-image","transparent");
+               $(".left-form select").css("background","#888888");
+               $(".left-form").css("content","none");
+               $(".left-form input[type=text]").css("background","#888888");
                
            }
                
@@ -319,6 +322,7 @@ padding-bottom: 10px;">
 });
         });
     </script>
+
         <script type="text/javascript">
         $(document).ready(function () {
             $('#menu').slicknav();
