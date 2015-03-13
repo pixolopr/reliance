@@ -60,6 +60,9 @@
 </head>
 
 <body style="background-image:none;background:#BDBEC0;">
+   <div class="preloader">
+       <img class="pre-set"src="<?php echo base_url("frontend")."/" ?>images/bx_loader.gif">
+   </div>
     
             <div class="mobile-menu hidden-md hidden-lg">
                 <ul id="menu">
@@ -246,10 +249,14 @@ float: none;line-height:0">captured & showcased under one roof!</p>
 <!--       <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.gallery.js"></script>-->
        <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.slicknav.js"></script>
        <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.mCustomScrollbar.min.js"></script>
+       <script>
+    	$(window).load(function() { $(".preloader").hide(); });
+    </script>
+       
        	<script>
 		(function($){
 			$(window).load(function(){
-				
+			
 				$(".scroll").mCustomScrollbar({
 					autoHideScrollbar:false,
 					theme:"rounded"

@@ -47,7 +47,9 @@
 </head>
 
 <body>
-   
+    <div class="preloader">
+       <img class="pre-set"src="<?php echo base_url("frontend")."/" ?>images/bx_loader.gif">
+   </div>
      
             <div class="mobile-menu hidden-md hidden-lg">
                 <ul id="menu">
@@ -455,6 +457,9 @@
     <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.gallery.js"></script>
     <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.slicknav.js"></script>
      
+            <script>
+    	$(window).load(function() { $(".preloader").hide(); });
+    </script>
      
       <script>
     $(".fancybox1").fancybox({

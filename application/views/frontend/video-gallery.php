@@ -51,7 +51,9 @@
 </head>
 
 <body>
-
+  <div class="preloader">
+       <img class="pre-set"src="<?php echo base_url("frontend")."/" ?>images/bx_loader.gif">
+   </div>
 
     <div class="mobile-menu hidden-md hidden-lg">
         <ul id="menu">
@@ -302,6 +304,9 @@ float: none;line-height:0">Views from those who matter.</p>
 <!--    <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.gallery.js"></script>-->
     <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.slicknav.js"></script>
     <div id="fb-root"></div>
+           <script>
+    	$(window).load(function() { $(".preloader").hide(); });
+    </script>
     <script>
                          function msieversion() {
 
