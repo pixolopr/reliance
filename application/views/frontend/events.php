@@ -42,8 +42,8 @@
 <!--    <link rel="stylesheet" type="text/css" href="sliderengine/amazingslider-1.css">-->
 <!--    <script src="sliderengine/initslider-1.js"></script>-->
 <!--    <script src="<?php echo base_url("frontend")."/" ?>js/jquery.flexslider-min.js"></script>-->
-    <script src="<?php echo base_url("frontend")."/" ?>js/jquery.bxslider.js"></script>
-    <script src="<?php echo base_url("frontend")."/" ?>js/jquery.fitvids.js"></script>
+<!--    <script src="<?php echo base_url("frontend")."/" ?>js/jquery.bxslider.js"></script>-->
+<!--    <script src="<?php echo base_url("frontend")."/" ?>js/jquery.fitvids.js"></script>-->
     <script src="<?php echo base_url("frontend")."/" ?>js/jquery.liquidcarousel.js"></script>
     
     
@@ -287,7 +287,7 @@ padding-bottom: 10px;">
             <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
            
 -->
-                <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.gallery.js"></script>
+<!--                <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.gallery.js"></script>-->
        <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.slicknav.js"></script>
        
        
@@ -328,12 +328,14 @@ padding-bottom: 10px;">
             $('#menu').slicknav();
         });
     </script>
+<!--
             <script>
                 $('.bxslider').bxSlider({
                     video: true,
                     useCSS: false
                 });
             </script>
+-->
 </body>
 
 </html>

@@ -243,7 +243,7 @@ float: none;line-height:0">captured & showcased under one roof!</p>
         </script>
         
     </div>
-       <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.gallery.js"></script>
+<!--       <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.gallery.js"></script>-->
        <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.slicknav.js"></script>
        <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.mCustomScrollbar.min.js"></script>
        	<script>

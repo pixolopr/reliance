@@ -16,11 +16,7 @@
     <!--[if IE 9]>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url("frontend")."/" ?>css/ie9.css" />
 <![endif]-->
-<!--
-      <script src="<?php echo base_url("frontend")."/" ?>js/modernizr.min.js"></script>
-    <script src="<?php echo base_url("frontend")."/" ?>js/css3-mediaqueries.js"></script>
-    <script src="<?php echo base_url("frontend")."/" ?>js/modernizr.custom.81085.js"></script>
--->
+
 <!--
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
@@ -45,7 +41,7 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <!--    <script src="<?php echo base_url("frontend")."/" ?>js/script.js"></script>-->
     <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/modernizr.custom.53451.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+<!--    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>-->
 <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>-->
    
 </head>
@@ -454,7 +450,8 @@
         </div>
     </div>
 <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/bootstrap.min.js"></script>
+<!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>-->
     <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.gallery.js"></script>
     <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.slicknav.js"></script>
      
@@ -501,6 +498,7 @@
                $(".left-form select").css("background","#888888");
                $(".left-form").css("content","none");
                $(".left-form input[type=text]").css("background","#888888");
+               $(".set-form textarea").css("background","#888888");
                
            }
             

@@ -299,7 +299,7 @@ float: none;line-height:0">Views from those who matter.</p>
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.gallery.js"></script>
+<!--    <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.gallery.js"></script>-->
     <script type="text/javascript" src="<?php echo base_url("frontend")."/" ?>js/jquery.slicknav.js"></script>
     <div id="fb-root"></div>
     <script>
