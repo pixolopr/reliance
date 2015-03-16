@@ -1603,5 +1603,29 @@ $data["redirect"]="site/viewfeedback";
 $this->load->view("redirect",$data);
 }
 
+
+    public function multipleimageupload()
+    {
+        $data["photoalbum"]=$this->input->get_post("photoalbum");
+        $data["before"]=new stdClass();
+        $data["before"]->id=$this->input->get_post("photoalbum");
+        $access=array("1");
+        $this->checkaccess($access);
+        $data["page2"]="block/relianceblock";
+        $data["title"]="Multiple Image Uploads";
+        $data["page"]="multipleimageupload";
+        $this->load->view("templatewith2",$data);
+    }
+    public function multipleimageuploadjson()
+    {
+        $name=$this->input->get_post("name");
+        $order=0;
+        $image=$this->input->get_post("image");
+        $photoalbum=$this->input->get_post("photoalbum");
+        $this->photos_model->create($name,$order,$image,$photoalbum);
+        $data["message"]="multipleimageupload";
+        $this->load->view("json",$data);
+    }
+
 }
 ?>
